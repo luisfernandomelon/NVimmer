@@ -11,9 +11,26 @@ green "|_| \\_|  \\_/  |_|_| |_| |_|_| |_| |_|\\___|_|"
 
 green "Welcome to NVimmer, Make your NeoVim/Vim perform as an IDE!!!"
 blue "Email: devilyouwei@gmail.com"
+echo ""
 byellow "Waiting for installing, 3 seconds..."
 
 sleep 3
+
+echo "Install Linux Compile Tools and Env------------------------"
+sudo --version
+status=$?
+if [ "$status" != 0 ]; then
+    echo "Install sudo"
+    apt install -y sudo
+fi
+sudo apt update
+sudo apt install -y cmake
+sudo apt install -y build-essential
+sudo apt install -y automake
+sudo apt install -y checkinstall
+echo "-----------------------------------------------------------"
+echo ""
+sleep 1
 
 echo ""
 echo "Check curl-------------------------------------------------"
