@@ -151,7 +151,7 @@ fi
 echo ""
 echo "Perl:"
 sudo apt install -y cpanminus
-sudo apt install pmuninstall
+sudo apt install -y pmuninstall
 cpanm -v
 if [ "$status" -eq 0 ]; then
     cpanm --local-lib ~/perl5 Neovim::Ext
