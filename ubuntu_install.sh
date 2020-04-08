@@ -245,7 +245,7 @@ curl -o ~/.eslintrc.json \
 
 curl -o ~/.prettierrc.json \
     https://raw.githubusercontent.com/devilyouwei/NVimmer/master/.prettierrc.json
-echo "Config successfully!"
+green "Config successfully!"
 green "----------------------------------------------------------"
 echo ""
 sleep 1
@@ -259,7 +259,7 @@ sleep 1
 
 echo "Clean trash and packages----------------------------------"
 sudo apt autoremove -y
-rm ubuntu.sh
+rm ubuntu_install.sh
 echo "----------------------------------------------------------"
 echo ""
 sleep 1
@@ -296,7 +296,13 @@ echo "--------------------Favour--------------------------------"
 echo '(๑ •̀ ㅂ•́ )و ✧ Like NVimmer? Go to:'
 echo ""
 blue 'https://github.com/devilyouwei/NVimmer'
+echo ""
 yellow '☆ ☆ ☆ ☆ ☆ '
 echo ""
-red 'Remeber to restart the terminal or reconnect to the server, then type nvim!'
+blue 'devilyouwei@gmail.com'
+blue 'https://www.devil.ren'
+blue '2ND Ave Long Branch NJ US'
+blue '@devilyouwei'
+echo ""
+byellow '(Remeber to restart the terminal or reconnect to the server, then type nvim!)'
 echo ""
