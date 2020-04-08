@@ -30,6 +30,13 @@ green "Welcome to NVimmer, Make your NeoVim/Vim perform as an IDE!!!"
 blue "Email: devilyouwei@gmail.com"
 
 echo ""
+byellow '1. 如在大陆地区使用，请注意是否需要科学上网...'
+echo ""
+byellow '2. 中国地区请更换gem,npm,pip等包管理器的镜像为国内源'
+byellow '(When in China, change the npm,gem,pip source to China Mainland)'
+echo ""
+byellow '3. 建议您的系统是干净的，如果已经有vim或者neovim的配置，请提前备份好，按<Ctrl-C>结束该脚本'
+echo ""
 byellow "Waiting for installing, 3 seconds..."
 echo ""
 
@@ -286,7 +293,9 @@ sleep 1
 
 echo "Clean trash and packages----------------------------------"
 sudo apt autoremove -y
-rm ubuntu_install.sh
+if [ ! -d ".git" ]; then
+    rm ubuntu_install.sh
+fi
 echo "----------------------------------------------------------"
 echo ""
 sleep 1
