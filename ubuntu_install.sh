@@ -96,6 +96,10 @@ status=$?
 if [ "$status" != 0 ]; then
     echo "Install Node.js..."
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+    if [ "$?" != 0 ]; then
+        red "Network Error: curl fail to download 'nvm'"
+        exit 1
+    fi
     export NVM_DIR="$HOME/.nvm"
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
     [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
@@ -191,7 +195,10 @@ sudo apt install -y cpanminus pmuninstall
 cpanm -v
 if [ "$status" -eq 0 ]; then
     cpanm --local-lib ~/perl5 Neovim::Ext
-    echo 'eval $(perl -I $HOME/perl5/lib/perl5 -Mlocal::lib)' >>~/.bashrc
+    cat ~/.bashrc | grep perl5
+    if [ "$?" != 0 ]; then
+        echo 'eval $(perl -I $HOME/perl5/lib/perl5 -Mlocal::lib)' >>~/.bashrc
+    fi
 fi
 echo "----------------------------------------------------------"
 echo ""
@@ -236,15 +243,31 @@ sleep 1
 green "Curl and Config Your NeoVim-------------------------------"
 curl -o ~/.config/nvim/init.vim --create-dirs \
     https://raw.githubusercontent.com/devilyouwei/NVimmer/master/nvim/init.vim
+if [ "$?" != 0 ]; then
+    red "Network Error: curl fail to download 'init.vim'"
+    exit 1
+fi
 
 curl -o ~/.config/nvim/coc-settings.json --create-dirs \
     https://raw.githubusercontent.com/devilyouwei/NVimmer/master/nvim/coc-settings.json
+if [ "$?" != 0 ]; then
+    red "Network Error: curl fail to download 'coc-settings.json'"
+    exit 1
+fi
 
 curl -o ~/.eslintrc.json \
-    https://github.com/devilyouwei/NVimmer/blob/master/.eslintrc.json
+    https://raw.githubusercontent.com/devilyouwei/NVimmer/master/.eslintrc.json
+if [ "$?" != 0 ]; then
+    red "Network Error: curl fail to download '.eslintrc.json'"
+    exit 1
+fi
 
 curl -o ~/.prettierrc.json \
     https://raw.githubusercontent.com/devilyouwei/NVimmer/master/.prettierrc.json
+if [ "$?" != 0 ]; then
+    red "Network Error: curl fail to download '.prettierrc.json'"
+    exit 1
+fi
 green "Config successfully!"
 green "----------------------------------------------------------"
 echo ""
@@ -253,6 +276,10 @@ sleep 1
 echo "Install vim-plug------------------------------------------"
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+if [ "$?" != 0 ]; then
+    red "Network Error: curl fail to download 'plug.vim'"
+    exit 1
+fi
 echo "----------------------------------------------------------"
 echo ""
 sleep 1
