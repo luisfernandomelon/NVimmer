@@ -37,6 +37,14 @@ Vue 的 coc-vetur 已经得到修复，现在可以正常使用了，感谢 coc 
 
 执行以下命令行，省事～ ✌
 
+推荐使用 **wget**
+
+```bash
+wget https://raw.githubusercontent.com/devilyouwei/NVimmer/master/ubuntu_install.sh && bash ubuntu_install.sh
+```
+
+**curl**
+
 ```
 curl -o- https://raw.githubusercontent.com/devilyouwei/NVimmer/master/ubuntu_install.sh | bash
 ```

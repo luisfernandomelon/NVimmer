@@ -39,7 +39,13 @@ Vue's language server has been fixed. Everthing works well in vue now!
 
 Execute the following commands, easy to install everything! ✌
 
-Require: **curl**
+**wget [recommended]**
+
+```bash
+wget https://raw.githubusercontent.com/devilyouwei/NVimmer/master/ubuntu_install.sh && bash ubuntu_install.sh
+```
+
+**curl**
 
 ```bash
 curl -o- https://raw.githubusercontent.com/devilyouwei/NVimmer/master/ubuntu_install.sh | bash

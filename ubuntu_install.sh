@@ -187,8 +187,7 @@ fi
 
 echo ""
 echo "Perl:"
-sudo apt install -y cpanminus
-sudo apt install -y pmuninstall
+sudo apt install -y cpanminus pmuninstall
 cpanm -v
 if [ "$status" -eq 0 ]; then
     cpanm --local-lib ~/perl5 Neovim::Ext
@@ -260,6 +259,7 @@ sleep 1
 
 echo "Clean trash and packages----------------------------------"
 sudo apt autoremove -y
+rm ubuntu.sh
 echo "----------------------------------------------------------"
 echo ""
 sleep 1
