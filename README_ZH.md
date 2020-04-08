@@ -14,7 +14,7 @@ NVimmer 是新版的 [Vimmer](https://github.com/devilyouwei/Vimmer)，NVimmer �
 
 ## 适用于
 
-1. HTML CSS JS
+1. HTML CSS JS **[eslint]**
 2. Java **[color enhanced]**
 3. C# **[enhanced]**
 4. vue
@@ -27,7 +27,7 @@ NVimmer 是新版的 [Vimmer](https://github.com/devilyouwei/Vimmer)，NVimmer �
 11. react js/jsx/tsx **[new]**
 12. Kotlin **[weakly support]**
 13. 英语单词 1000 多自动补全 **[new]**
-14. Emoji 表情补全(输入':'后自动弹出) **[new]**
+14. Emoji 表情补全 (输入`:`后自动弹出) **[new]**
 
 ## 【重磅推荐】Ubuntu Shell 脚本一键安装 🚤 🚤 🚤
 
@@ -183,11 +183,21 @@ nvim -c PlugInstall
 npm install -g neovim
 ```
 
+注：嫌速度慢，可自行更换国内镜像源
+
 2. 针对 Ruby 开发者
 
 ```bash
 sudo apt install ruby-dev
 sudo gem install neovim
+```
+
+Ruby 更换国内源
+
+```
+gem sources --add https://gems.ruby-china.com/ --remove https://rubygems.org/
+gem sources -l
+# https://gems.ruby-china.com
 ```
 
 3. 针对前端和 JS 开发者，全局安装 eslint
@@ -231,6 +241,7 @@ pip3 install neovim
 ```
 sudo apt install cpanminus
 sudo cpanm Neovim::Ext
+echo 'eval $(perl -I $HOME/perl5/lib/perl5 -Mlocal::lib)' >>~/.bashrc
 ```
 
 ## 使用
@@ -259,17 +270,15 @@ sudo cpanm Neovim::Ext
 
 -   PlugInstall 安装好后打开 nvim，coc 的方法 call 不到，报错。请请检查你的 nvim 是不是低于 0.3.0，也可以输入:checkHealth 检查，请安装高于 0.3.0 的版本
 
--   关于浮动窗口，自动补全显示的详细文档解释小窗口，需要 0.4.0 以上的 neovim，这种情况下请使用 snap 安装，或者官网寻找安装 0.4.0
-    以上的方法
+-   关于开启浮动窗口，自动补全显示的详细文档的小窗口，需要 0.4.0 以上的 neovim，这种情况下请使用 snap 安装，或者官网寻找安装 0.4.0 以上版本的 neovim
 
 -   C#的 CS 文件第一次进入会要求安装 monoserver 用于自动补全和代码检查，选择 Yes
 
--   Nerd 字体无法显示，nerdtree 里都是乱码和方块，该问题是因为你没有安装 nerd 字体，并把 Terminal 字体更换成 nerd 字体，建议将/font 目录下的 MonacoNerd.ttf 安装到系统中，并把 Gnome-terminal 字体改成 Monaco Nerd。苹果的 Monaco 字体真好看！
+-   Nerd 字体无法显示，nerdtree 里都是乱码和方块，该问题是因为你没有安装 nerd 字体，并把 Terminal 字体更换成 nerd 字体，建议将/font 目录下的 MonacoNerd.ttf 安装到系统中，并把 Gnome-terminal 字体改成 Monaco Nerd。苹果的 Monaco 字体真好看！Windows 只能用 codenewroman nerd 字体
 
--   浮动窗口卡在那里关不掉，请使用 c-w,o 手动清楚遮挡的浮动窗口
+-   浮动窗口卡在那里关不掉，请使用 c-w,o 手动清楚遮挡的浮动窗口，目测是 neovim 的 bug，没办法
 
--   格式化不喜欢，请修改 coc-setting.json 或者直接在 nvim 中输入':CocConfig'，另外.eslintrc.json 里是针对 prettier 格式化的
-    设置，也可以改
+-   格式化不喜欢，请修改 coc-setting.json 或者直接在 nvim 中输入':CocConfig'，另外.eslintrc.json 里是针对 prettier 格式化的设置，也可以按照喜好改
 
 -   "System limit for number of file watchers reached"
 

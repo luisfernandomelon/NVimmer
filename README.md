@@ -29,7 +29,7 @@ NVimmer is a new version of [Vimmer](https://github.com/devilyouwei/Vimmer). The
 11. react js/jsx/tsx **[new]**
 12. Kotlin **[weakly support]**
 13. English Words 1K+ **[new]**
-14. Emoji **[new]**
+14. Emoji (type `:` select emoji) **[new]**
 
 ## [Recommended] Ubuntu Shell Onekey Install 🚤 🚤 🚤
 
@@ -205,6 +205,7 @@ sudo gem install neovim
 ```bash
 sudo apt install cpanminus
 sudo cpanm Neovim::Ext
+echo 'eval $(perl -I $HOME/perl5/lib/perl5 -Mlocal::lib)' >>~/.bashrc
 ```
 
 **For Python**
