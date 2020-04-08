@@ -53,6 +53,8 @@ wget https://raw.githubusercontent.com/devilyouwei/NVimmer/master/ubuntu_install
 wget https://github.com/devilyouwei/NVimmer/raw/master/fonts/linux/MonacoNerd.ttf -P ~/.fonts/
 
 fc-cache -vf
+
+# 重启终端
 ```
 
 或者手动下载后双击安装！需要您安装后手动配置终端字体。
