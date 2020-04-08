@@ -35,13 +35,15 @@ Vue 的 coc-vetur 已经得到修复，现在可以正常使用了，感谢 coc 
 
 ## 【重磅推荐】Ubuntu Shell 脚本一键安装
 
-执行以下命令行，省事～
+执行以下命令行，省事～ ✌
 
 ```
-git clone https://github.com/devilyouwei/NVimmer.git
-cd NVimmer
-chmod +x ./ubuntu_install.sh && ./ubuntu_install.sh
+curl -o- https://raw.githubusercontent.com/devilyouwei/NVimmer/master/ubuntu_install.sh | bash
 ```
+
+下载并使用苹果的 Monaco 字体！需要您安装后手动配置终端字体。
+
+[Monaco Nerd Font](https://github.com/devilyouwei/NVimmer/raw/master/fonts/linux/MonacoNerd.ttf)
 
 ## 手动开始，按部就班
 

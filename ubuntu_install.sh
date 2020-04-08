@@ -1,7 +1,24 @@
 #!/bin/bash
 
-#node_version=13
-source colors.sh
+function yellow() {
+    echo -e "\033[33m\033[01m\033[05m$1\033[0m"
+}
+
+function red() {
+    echo -e "\033[31m\033[01m$1\033[0m"
+}
+
+function green() {
+    echo -e "\033[32m$1\033[0m"
+}
+
+function byellow() {
+    echo -e "\033[33m\033[01m$1\033[0m"
+}
+
+function blue() {
+    echo -e "\033[34m$1\033[0m"
+}
 
 green " _   ___     ___                               "
 green "| \\ | \\ \\   / (_)_ __ ___  _ __ ___   ___ _ __ "
@@ -11,8 +28,10 @@ green "|_| \\_|  \\_/  |_|_| |_| |_|_| |_| |_|\\___|_|"
 
 green "Welcome to NVimmer, Make your NeoVim/Vim perform as an IDE!!!"
 blue "Email: devilyouwei@gmail.com"
+
 echo ""
 byellow "Waiting for installing, 3 seconds..."
+echo ""
 
 sleep 3
 
@@ -24,10 +43,7 @@ if [ "$status" != 0 ]; then
     apt install -y sudo
 fi
 sudo apt update
-sudo apt install -y cmake
-sudo apt install -y build-essential
-sudo apt install -y automake
-sudo apt install -y checkinstall
+sudo apt install -y cmake build-essential automake checkinstall
 echo "-----------------------------------------------------------"
 echo ""
 sleep 1
@@ -140,19 +156,23 @@ fi
 
 echo ""
 echo "Python2:"
-sudo apt install -y python-pip
 pip --version
 status=$?
 if [ "$status" -eq 0 ]; then
+    pip install neovim
+else
+    sudo apt install -y python-pip
     pip install neovim
 fi
 
 echo ""
 echo "Python3:"
-sudo apt install -y python3-pip
 pip3 --version
 status=$?
 if [ "$status" -eq 0 ]; then
+    pip3 install neovim
+else
+    sudo apt install -y python3-pip
     pip3 install neovim
 fi
 
@@ -214,15 +234,20 @@ echo "----------------------------------------------------------"
 echo ""
 sleep 1
 
-echo "Copy and Config Your NeoVim-------------------------------"
-if [ ! -d ~/.config ]; then
-    mkdir ~/.config
-fi
-cp -rf ./nvim/ ~/.config/
-cp ./.eslintrc.json ~/
-cp ./.prettierrc.json ~/
+green "Curl and Config Your NeoVim-------------------------------"
+curl -o ~/.config/nvim/init.vim --create-dirs \
+    https://raw.githubusercontent.com/devilyouwei/NVimmer/master/nvim/init.vim
+
+curl -o ~/.config/nvim/coc-settings.json --create-dirs \
+    https://raw.githubusercontent.com/devilyouwei/NVimmer/master/nvim/coc-settings.json
+
+curl -o ~/.eslintrc.json \
+    https://github.com/devilyouwei/NVimmer/blob/master/.eslintrc.json
+
+curl -o ~/.prettierrc.json \
+    https://raw.githubusercontent.com/devilyouwei/NVimmer/master/.prettierrc.json
 echo "Config successfully!"
-echo "----------------------------------------------------------"
+green "----------------------------------------------------------"
 echo ""
 sleep 1
 

@@ -37,15 +37,19 @@ Vue's language server has been fixed. Everthing works well in vue now!
 
 ## [Recommended] Ubuntu Shell Onekey Install
 
-Execute the following commands, easy to install everything!
+Execute the following commands, easy to install everything! ✌
 
-```
-git clone https://github.com/devilyouwei/NVimmer.git
-cd NVimmer
-chmod +x ./ubuntu_install.sh && ./ubuntu_install.sh
+Require: **curl**
+
+```bash
+curl -o- https://raw.githubusercontent.com/devilyouwei/NVimmer/master/ubuntu_install.sh | bash
 ```
 
-## Quick Start (manually, step by step)
+Customize your terminal fonts! You need to config the font for terminal manually.
+
+[Monaco Nerd Font](https://github.com/devilyouwei/NVimmer/raw/master/fonts/linux/MonacoNerd.ttf)
+
+## Quick Start (Manually, Step by Step)
 
 ### Install NeoVim
 
