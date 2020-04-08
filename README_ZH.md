@@ -29,46 +29,52 @@ NVimmer 是新版的 [Vimmer](https://github.com/devilyouwei/Vimmer)，NVimmer �
 13. 英语单词 1000 多自动补全 **[new]**
 14. Emoji 表情补全(输入':'后自动弹出) **[new]**
 
-Python 在未来可能会得到支持。
+## 【重磅推荐】Ubuntu Shell 脚本一键安装 🚤 🚤 🚤
 
-Vue 的 coc-vetur 已经得到修复，现在可以正常使用了，感谢 coc 团队。
+执行以下命令行，省事省心的安装～ ✌
 
-## 【重磅推荐】Ubuntu Shell 脚本一键安装
+🌟 推荐使用 **curl**
 
-执行以下命令行，省事～ ✌
+```
+curl -o ./ubuntu_install.sh https://raw.githubusercontent.com/devilyouwei/NVimmer/master/ubuntu_install.sh && bash ubuntu_install.sh
+```
 
-推荐使用 **wget**
+**wget**
 
 ```bash
 wget https://raw.githubusercontent.com/devilyouwei/NVimmer/master/ubuntu_install.sh && bash ubuntu_install.sh
 ```
 
-**curl**
+**苹果字体** 🍎
 
-```
-curl -o- https://raw.githubusercontent.com/devilyouwei/NVimmer/master/ubuntu_install.sh | bash
-```
-
-下载并使用苹果的 Monaco 字体！需要您安装后手动配置终端字体。
-
-[Monaco Nerd Font](https://github.com/devilyouwei/NVimmer/raw/master/fonts/linux/MonacoNerd.ttf)
-
-## 手动开始，按部就班
-
-### 安装 Neovim
-
-法 1：ubuntu，ubuntu 自带的 neovim 比较老，但比较稳定，不支持 coc 插件，所以要用 ppa 方式下载最新稳定版。
+用 **wget** 下载字体（必须 wget），然后直接打开 terminal 在首选项中的字体改为：`Monaco Nerd Font` 即可
 
 ```bash
-sudo add-apt-repository ppa:neovim-ppa/stable
-sudo apt-get update
-sudo apt-get install neovim
+wget https://github.com/devilyouwei/NVimmer/blob/master/fonts/linux/MonacoNerd.ttf?raw=true -O ~/.fonts/MonacoNerd.ttf
+
+fc-cache -vf
 ```
+
+或者手动下载后双击安装！需要您安装后手动配置终端字体。
+
+[下载 Monaco Nerd Font](https://github.com/devilyouwei/NVimmer/raw/master/fonts/linux/MonacoNerd.ttf)
+
+## 手动开始，按部就班 🔨 🔨 🔨
+
+### 安装 Neovim
 
 【推荐】用 snap 安装，只能安装 edge 和 beta 版本，安装 beta
 
 ```bash
 sudo snap install --beta nvim --classic
+```
+
+法 2：ubuntu 自带的 neovim 太老，不支持 coc 插件，所以要用 ppa 方式下载最新稳定版。
+
+```bash
+sudo add-apt-repository ppa:neovim-ppa/stable
+sudo apt-get update
+sudo apt-get install neovim
 ```
 
 其他系统安装请参考 github 官方教程：
@@ -112,7 +118,8 @@ nvm install stable
 [https://nodejs.org](https://nodejs.org/)
 
 注意：这里千万**不要用 snap 安装**，无法通过 `:checkhealth` 检查
-另外：nvm 在.bashrc 中添加的脚本可能拖慢打开 bash 的速度，如果不用 nvm 可以删除那段脚本
+
+另外：nvm 在 `.bashrc` 中添加的脚本可能拖慢打开 bash 的速度
 
 ### 安装 Vim-Plug
 
@@ -125,7 +132,7 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 
 ### 插件安装
 
-进入 nvim，输入:PlugInstall 安装所有插件
+进入 nvim，输入`:PlugInstall` 安装所有插件
 
 或者在终端中执行：
 

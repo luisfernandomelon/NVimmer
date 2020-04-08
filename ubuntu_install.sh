@@ -43,7 +43,7 @@ if [ "$status" != 0 ]; then
     apt install -y sudo
 fi
 sudo apt update
-sudo apt install -y cmake build-essential automake checkinstall
+sudo apt install -y cmake build-essential automake checkinstall git
 echo "-----------------------------------------------------------"
 echo ""
 sleep 1

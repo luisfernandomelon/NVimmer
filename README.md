@@ -6,7 +6,7 @@ _Continuously updating..._
 
 [Chinese Readme](README_ZH.md)
 
-A simple, fast and efficient **VIM IDE Configuration**, it is especially suitable for full stack developers.
+A simple, fast and efficient **VIM IDE Configuration**, it is especially nice for the full stack developers.
 
 With Monaco nerd font on Linux.
 
@@ -16,7 +16,7 @@ NVimmer is a new version of [Vimmer](https://github.com/devilyouwei/Vimmer). The
 
 ## Support
 
-1. HTML CSS JS
+1. HTML CSS JS **[eslint]**
 2. Java **[color enhanced]**
 3. C# **[enhanced]**
 4. vue
@@ -31,31 +31,37 @@ NVimmer is a new version of [Vimmer](https://github.com/devilyouwei/Vimmer). The
 13. English Words 1K+ **[new]**
 14. Emoji **[new]**
 
-Python may be supported in the future.
+## [Recommended] Ubuntu Shell Onekey Install 🚤 🚤 🚤
 
-Vue's language server has been fixed. Everthing works well in vue now!
+Execute the following commands, install everything! ✌
 
-## [Recommended] Ubuntu Shell Onekey Install
+🌟 **curl [recommend]**
 
-Execute the following commands, easy to install everything! ✌
+```bash
+curl -o ./ubuntu_install.sh https://raw.githubusercontent.com/devilyouwei/NVimmer/master/ubuntu_install.sh && bash ubuntu_install.sh
+```
 
-**wget [recommended]**
+**wget**
 
 ```bash
 wget https://raw.githubusercontent.com/devilyouwei/NVimmer/master/ubuntu_install.sh && bash ubuntu_install.sh
 ```
 
-**curl**
+**Monaco Nerd Fonts**
+
+Use wget (must) to download the font, and then open a terminal preference to config the font to `Monaco Nerd Font`
 
 ```bash
-curl -o- https://raw.githubusercontent.com/devilyouwei/NVimmer/master/ubuntu_install.sh | bash
+wget https://github.com/devilyouwei/NVimmer/blob/master/fonts/linux/MonacoNerd.ttf?raw=true -O ~/.fonts/MonacoNerd.ttf
+
+fc-cache -vf
 ```
 
-Customize your terminal fonts! You need to config the font for terminal manually.
+Or, You would like to download and install the font manually by double clicking it.
 
-[Monaco Nerd Font](https://github.com/devilyouwei/NVimmer/raw/master/fonts/linux/MonacoNerd.ttf)
+[Download Monaco Nerd Font](https://github.com/devilyouwei/NVimmer/raw/master/fonts/linux/MonacoNerd.ttf)
 
-## Quick Start (Manually, Step by Step)
+## Quick Start (Manually, Step by Step) 🔨 🔨 🔨
 
 ### Install NeoVim
 
