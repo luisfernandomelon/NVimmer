@@ -272,11 +272,11 @@ sudo apt-get install lazygit
 -   Find tags, includeing functions, class globally, press: **Ctrl-T** or **ft**
 -   Find buffers, press: **Ctrl-B** or **fb**
 -   Find files in current path, press: **Ctrl-F** or **Ctrl-P** or **ff**
--   **[new]** Find English words in vim, should in 'Insert Mode' and press: **Ctrl-X** then **Ctrl-W**
+-   Find English words in vim, should in 'Insert Mode' and press: **Ctrl-X** then **Ctrl-W**
 
 ## Examples :tada: :tada: :tada:
 
-![example](example/example.png)
+![example](example/ex0.png)
 
 ![example](example/ex1.png)
 

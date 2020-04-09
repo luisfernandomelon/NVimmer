@@ -264,7 +264,7 @@ echo 'eval $(perl -I $HOME/perl5/lib/perl5 -Mlocal::lib)' >>~/.bashrc
 -   标签全局搜索，可以搜索全局搜索函数，类，变量定义等，**normal 模式**下, 按: **Ctrl-T** 或 **ft**
 -   搜索 buffers, **normal 模式**下, 按: **Ctrl-B** 或 **fb**
 -   搜索当前路径下的文件, **normal 模式**下, 按: **Ctrl-F** or **Ctrl-P** 或 **ff**
--   **[new]** 在 vim 下搜索英语单词！**插入模式**下，连续按下: **Ctrl-X** **Ctrl-W**
+-   在 vim 下搜索英语单词！**插入模式**下，连续按下: **Ctrl-X** **Ctrl-W**
 
 ## 问题
 
@@ -297,7 +297,7 @@ sudo sysctl --system
 
 ## 示例 :tada: :tada: :tada:
 
-![example](example/example.png)
+![example](example/ex0.png)
 
 ![example](example/ex1.png)
 
