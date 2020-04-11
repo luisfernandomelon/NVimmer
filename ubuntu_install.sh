@@ -173,6 +173,7 @@ pip --version
 status=$?
 if [ "$status" -eq 0 ]; then
     pip install neovim
+    pip install neovim-remote
 else
     sudo apt install -y python-pip
     pip install neovim
