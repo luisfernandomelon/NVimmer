@@ -38,7 +38,7 @@ Execute the following commands, install everything! ✌
 🌟 **curl [recommend]**
 
 ```bash
-curl -o ./ubuntu_install.sh https://raw.githubusercontent.com/devilyouwei/NVimmer/master/ubuntu_install.sh && bash ubuntu_install.sh
+curl -o- https://raw.githubusercontent.com/devilyouwei/NVimmer/master/ubuntu_install.sh | bash
 ```
 
 **wget**
@@ -46,6 +46,12 @@ curl -o ./ubuntu_install.sh https://raw.githubusercontent.com/devilyouwei/NVimme
 ```bash
 wget https://raw.githubusercontent.com/devilyouwei/NVimmer/master/ubuntu_install.sh && bash ubuntu_install.sh
 ```
+
+**Script Fail**
+
+1. During the process of installations, the script may fail to download something, especially in China.
+2. If the script is interrupted or exit with errors, please run it again, until it success.
+3. After all the installations are finished, if nvim still doesn't work well, same with point 2, try again!
 
 **Monaco Nerd Fonts**
 

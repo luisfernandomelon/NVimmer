@@ -36,7 +36,7 @@ NVimmer 是新版的 [Vimmer](https://github.com/devilyouwei/Vimmer)，NVimmer �
 🌟 推荐使用 **curl**
 
 ```
-curl -o ./ubuntu_install.sh https://raw.githubusercontent.com/devilyouwei/NVimmer/master/ubuntu_install.sh && bash ubuntu_install.sh
+curl -o- https://raw.githubusercontent.com/devilyouwei/NVimmer/master/ubuntu_install.sh | bash
 ```
 
 **wget**
@@ -44,6 +44,10 @@ curl -o ./ubuntu_install.sh https://raw.githubusercontent.com/devilyouwei/NVimme
 ```bash
 wget https://raw.githubusercontent.com/devilyouwei/NVimmer/master/ubuntu_install.sh && bash ubuntu_install.sh
 ```
+
+**安装过程出现问题** 🤔 🤔 🤔
+
+任何脚本运行出现问题或者安装后 nvim 无法正常工作的现象出现，可以先重新启动 Terminal，如果 nvim 还是有报错，那请重新执行安装脚本，本人的环境为 ubuntu18.04+（干净），亲测可用，失败统统重新运行，很多东西从 github 下载会被打断或者很慢，你懂得～
 
 **苹果字体** 🍎
 

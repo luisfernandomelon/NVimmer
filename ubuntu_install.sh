@@ -102,11 +102,13 @@ node -v
 status=$?
 if [ "$status" != 0 ]; then
     echo "Install Node.js..."
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+    curl -o ~/.nvm/install.sh --create-dirs \
+        https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh
     if [ "$?" != 0 ]; then
         red "Network Error: curl fail to download 'nvm'"
         exit 1
     fi
+    bash ~/.nvm/install.sh
     export NVM_DIR="$HOME/.nvm"
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
     [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
@@ -293,9 +295,6 @@ sleep 1
 
 echo "Clean trash and packages----------------------------------"
 sudo apt autoremove -y
-if [ ! -d ".git" ]; then
-    rm ubuntu_install.sh
-fi
 echo "----------------------------------------------------------"
 echo ""
 sleep 1
