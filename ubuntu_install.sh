@@ -171,24 +171,21 @@ echo ""
 echo "Python2:"
 pip --version
 status=$?
-if [ "$status" -eq 0 ]; then
-    pip install neovim
-    pip install neovim-remote
-else
+if [ "$status" != 0 ]; then
     sudo apt install -y python-pip
-    pip install neovim
 fi
+pip install neovim
+pip install neovim-remote
 
 echo ""
 echo "Python3:"
 pip3 --version
 status=$?
-if [ "$status" -eq 0 ]; then
-    pip3 install neovim
-else
+if [ "$status" != 0 ]; then
     sudo apt install -y python3-pip
-    pip3 install neovim
 fi
+pip3 install neovim
+pip3 install neovim-remote
 
 echo ""
 echo "Ruby:"
@@ -205,10 +202,10 @@ sudo apt install -y cpanminus pmuninstall
 cpanm -v
 if [ "$status" -eq 0 ]; then
     cpanm --local-lib ~/perl5 Neovim::Ext
-    cat ~/.bashrc | grep perl5
-    if [ "$?" != 0 ]; then
-        echo 'eval $(perl -I $HOME/perl5/lib/perl5 -Mlocal::lib)' >>~/.bashrc
-    fi
+fi
+cat ~/.bashrc | grep perl5
+if [ "$?" != 0 ]; then
+    echo 'eval $(perl -I $HOME/perl5/lib/perl5 -Mlocal::lib)' >>~/.bashrc
 fi
 echo "----------------------------------------------------------"
 echo ""
