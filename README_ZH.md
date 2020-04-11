@@ -36,7 +36,7 @@ NVimmer 是新版的 [Vimmer](https://github.com/devilyouwei/Vimmer)，NVimmer �
 🌟 推荐使用 **curl**
 
 ```
-curl -o- https://raw.githubusercontent.com/devilyouwei/NVimmer/master/ubuntu_install.sh | bash
+curl -o ubuntu_install.sh https://raw.githubusercontent.com/devilyouwei/NVimmer/master/ubuntu_install.sh && bash ubuntu_install.sh
 ```
 
 **wget**

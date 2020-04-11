@@ -288,6 +288,9 @@ sleep 1
 
 echo "Clean trash and packages----------------------------------"
 sudo apt autoremove -y
+if [ ! -d ".git" ]; then
+    rm ubuntu_install.sh
+fi
 echo "----------------------------------------------------------"
 echo ""
 sleep 1

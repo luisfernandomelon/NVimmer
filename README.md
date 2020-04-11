@@ -38,7 +38,7 @@ Execute the following commands, install everything! ✌
 🌟 **curl [recommend]**
 
 ```bash
-curl -o- https://raw.githubusercontent.com/devilyouwei/NVimmer/master/ubuntu_install.sh | bash
+curl -o ubuntu_install.sh https://raw.githubusercontent.com/devilyouwei/NVimmer/master/ubuntu_install.sh && bash ubuntu_install.sh
 ```
 
 **wget**
