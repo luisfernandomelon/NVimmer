@@ -50,7 +50,7 @@ if [ "$status" != 0 ]; then
     apt install -y sudo
 fi
 sudo apt update
-sudo apt install -y cmake build-essential automake checkinstall git
+sudo apt install -y cmake build-essential automake checkinstall git ssl-cert
 echo "-----------------------------------------------------------"
 echo ""
 sleep 1
@@ -162,16 +162,14 @@ echo "Install NeoVim Providers-----------------------------------"
 echo ""
 echo "Node:"
 npm -v
-status=$?
-if [ "$status" -eq 0 ]; then
+if [ "$?" -eq 0 ]; then
     npm -g install neovim
 fi
 
 echo ""
 echo "Python2:"
 pip --version
-status=$?
-if [ "$status" != 0 ]; then
+if [ "$?" != 0 ]; then
     sudo apt install -y python-pip
 fi
 pip install neovim
@@ -180,8 +178,7 @@ pip install neovim-remote
 echo ""
 echo "Python3:"
 pip3 --version
-status=$?
-if [ "$status" != 0 ]; then
+if [ "$?" != 0 ]; then
     sudo apt install -y python3-pip
 fi
 pip3 install neovim
@@ -190,8 +187,7 @@ pip3 install neovim-remote
 echo ""
 echo "Ruby:"
 gem -v
-status=$?
-if [ "$status" -eq 0 ]; then
+if [ "$?" -eq 0 ]; then
     sudo apt install -y ruby-dev
     sudo gem install neovim
 fi
@@ -200,7 +196,7 @@ echo ""
 echo "Perl:"
 sudo apt install -y cpanminus pmuninstall
 cpanm -v
-if [ "$status" -eq 0 ]; then
+if [ "$?" -eq 0 ]; then
     cpanm --local-lib ~/perl5 Neovim::Ext
 fi
 cat ~/.bashrc | grep perl5
@@ -213,8 +209,7 @@ sleep 1
 
 echo "Install ESLint--------------------------------------------"
 eslint -v
-status=$?
-if [ "$status" != 0 ]; then
+if [ "$?" != 0 ]; then
     echo "Install eslint..."
     npm -g install eslint
 fi
