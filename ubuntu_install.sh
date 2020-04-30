@@ -158,6 +158,17 @@ echo "-----------------------------------------------------------"
 echo ""
 sleep 1
 
+echo "Check Latex------------------------------------------------"
+latexmk -v
+status=$?
+if [ "$status" != 0 ]; then
+    echo "Install Latexmk..."
+    sudo apt install -y latexmk
+fi
+echo "-----------------------------------------------------------"
+echo ""
+sleep 1
+
 echo "Install NeoVim Providers-----------------------------------"
 echo ""
 echo "Node:"
