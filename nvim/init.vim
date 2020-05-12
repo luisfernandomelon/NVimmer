@@ -27,11 +27,7 @@ Plug 'honza/vim-snippets'
 "Plug 'Shougo/neco-vim'
 "Plug 'neoclide/coc-neco'
 Plug 'voldikss/vim-floaterm'
-let g:floaterm_type = 'floating'
-let g:floaterm_winblend = '25'
 let g:floaterm_position = 'center'
-hi FloatermNF guibg=black
-hi FloatermBorderNF guibg=orange guifg=green
 Plug 'tomasr/molokai'
 Plug 'majutsushi/tagbar', {'on':'TagbarToggle'}
 Plug 'Chiel92/vim-autoformat'
@@ -39,7 +35,6 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'vim-airline/vim-airline'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-"Plug 'jreybert/vimagit'
 Plug 'tpope/vim-fugitive'
 Plug 'ryanoasis/vim-devicons'
 Plug 'Yggdroot/indentLine'

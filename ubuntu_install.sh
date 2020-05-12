@@ -183,6 +183,17 @@ pip --version
 if [ "$?" != 0 ]; then
     sudo apt install -y python-pip
 fi
+# check pip again because of ubuntu 20.04, there is no python-pip avaliable in apt
+pip --version
+if [ "$?" != 0 ]; then
+    curl https://bootstrap.pypa.io/get-pip.py | python
+    if [ "$?" != 0 ]; then
+        red "Network Error: curl fail to download 'pip'"
+        exit 1
+    fi
+    rm get-pip.py
+    export PATH=$PATH:$HOME/.local/bin
+fi
 pip install neovim
 pip install neovim-remote
 
@@ -209,6 +220,7 @@ sudo apt install -y cpanminus pmuninstall
 cpanm -v
 if [ "$?" -eq 0 ]; then
     cpanm --local-lib ~/perl5 Neovim::Ext
+    cpanm Neovim::Ext
 fi
 cat ~/.bashrc | grep perl5
 if [ "$?" != 0 ]; then
