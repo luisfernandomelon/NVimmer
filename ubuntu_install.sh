@@ -30,10 +30,10 @@ green "Welcome to NVimmer, Make your NeoVim/Vim perform as an IDE!!!"
 blue "Email: devilyouwei@gmail.com"
 
 echo ""
-byellow '1. 如在大陆地区使用，请注意是否需要科学上网...'
+byellow '1. 如在大陆地区使用，有些插件需要科学上网...'
 echo ""
-byellow '2. 中国地区请更换gem,npm,pip等包管理器的镜像为国内源'
-byellow '(When in China, change the npm,gem,pip source to China Mainland)'
+byellow '2. 中国地区请更换gem, npm, pip等包管理器的镜像为国内源'
+byellow '(When in China, change the npm, gem, pip source to China Mainland)'
 echo ""
 byellow '3. 建议您的系统是干净的，如果已经有vim或者neovim的配置，请提前备份好，按<Ctrl-C>结束该脚本'
 echo ""
@@ -230,11 +230,11 @@ echo "----------------------------------------------------------"
 echo ""
 sleep 1
 
-echo "Install ESLint--------------------------------------------"
+echo "Install ESLint and Prettier-------------------------------"
 eslint -v
 if [ "$?" != 0 ]; then
-    echo "Install eslint..."
-    npm -g install eslint
+    echo "Install eslint and prettier..."
+    npm -g install eslint prettier
 fi
 echo "----------------------------------------------------------"
 echo ""
@@ -319,14 +319,14 @@ echo ""
 sleep 1
 
 echo "Install NeoVim Plugins------------------------------------"
-nvim -c PlugInstall -c q -c q
+nvim -c PlugInstall -c CocInstall -c CocUpdate -c q -c q -c q
 echo "Exit NeoVim..."
 echo "All the plugins are installed!"
 echo "----------------------------------------------------------"
 echo ""
 sleep 1
 
-read -p "Set NeoVim as the default editor or replace vim?[Y/N]: " confirm
+read -p "Set NeoVim as the default editor or replace vim? [Y/N]: " confirm
 
 if [ "$confirm" = "y" ] || [ "$confrim" = "Y" ] || [ "$confirm" = "yes" ] || [ "$confirm" = "Yes" ]; then
     echo "export EDITOR=/snap/bin/nvim" >>~/.bashrc

@@ -2,22 +2,30 @@
     //tsserver
     "javascript.validate.enable": false, //use eslint to check js
 
+    //prettier
+    "prettier.useTabs": false,
+    "prettier.tabWidth": 4,
+    "prettier.semi": false,
+    "prettier.singleQuote": true,
+    "prettier.jsxBracketSameLine": true,
+    "prettier.printWidth": 100,
+    "prettier.jsxSingleQuote": false,
+    "prettier.bracketSpacing": true,
+    "prettier.trailingComma": "none",
+
     //vue
     "vetur.format.enable": true,
-    "vetur.format.options.tabSize": 4,
-    "vetur.format.options.useTabs": false,
     "vetur.validation.style": true,
     "vetur.validation.script": true,
     "vetur.validation.template": true,
-    "vetur.format.defaultFormatter.html": "prettyhtml",
-    "vetur.format.defaultFormatterOptions": {
-        "prettyhtml": {
-            "printWidth": 100,
-            "singleQuote": false,
-            "wrapAttributes": false,
-            "sortAttributes": true
-        }
-    },
+    "vetur.format.defaultFormatter.js": "prettier-eslint",
+    "vetur.format.defaultFormatter.html": "prettier",
+    "vetur.format.defaultFormatter.css": "prettier",
+    "vetur.format.defaultFormatter.less": "prettier",
+    "vetur.format.defaultFormatter.scss": "prettier",
+    "vetur.format.defaultFormatter.ts": "prettier",
+    "vetur.format.defaultFormatter.stylus": "stylus-supremacy",
+    "vetur.format.defaultFormatter.postcss": "prettier",
 
     //json
     "json.format.enable": false,
@@ -32,17 +40,6 @@
     "html.format.endWithNewline": false,
     "html.format.wrapAttributes": "auto",
 
-    //prettier
-    //"prettier.formatterPriority": -1,
-    "prettier.semi": false,
-    "prettier.useTabs": false,
-    "prettier.printWidth": 100,
-    "prettier.tabWidth": 4,
-    "prettier.singleQuote": true,
-    "prettier.trailingComma": "none",
-    "prettier.jsxSingleQuote": false,
-    "prettier.jsxBracketSameLine": true,
-
     //emmet
     "emmet.includeLanguages": {
         "javascript": "javascriptreact"
@@ -51,7 +48,7 @@
     //eslint,js
     "eslint.autoFix": true,
     "eslint.autoFixOnSave": true,
-    "eslint.filetypes": ["javascript", "javascriptreact", "javascript.jsx"],
+    "eslint.filetypes": ["javascript", "javascriptreact", "javascript.jsx", "vue"],
     "eslint.run": "onType",
 
     //java

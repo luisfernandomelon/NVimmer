@@ -31,6 +31,8 @@ NVimmer is a new version of [Vimmer](https://github.com/devilyouwei/Vimmer). The
 13. English Words 1K+ **[new]**
 14. Emoji (type `:` select emoji) **[new]**
 
+NVimmer will use **Prettier and eslint** as the default linter and formatter for the fontend!
+
 ## [Recommended] Ubuntu Shell Onekey Install 🚤 🚤 🚤
 
 Execute the following commands, install everything! ✌
@@ -52,6 +54,7 @@ wget https://raw.githubusercontent.com/devilyouwei/NVimmer/master/ubuntu_install
 1. During the process of installations, the script may fail to download something, especially in China.
 2. If the script is interrupted or exit with errors, please run it again, until it success.
 3. After all the installations are finished, if nvim still doesn't work well, same with point 2, try again!
+4. For the first time, please restart terminal and then open neovim.
 
 **Monaco Nerd Fonts**
 
