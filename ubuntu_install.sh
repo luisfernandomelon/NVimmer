@@ -324,7 +324,8 @@ echo ""
 sleep 1
 
 echo "Install NeoVim Plugins------------------------------------"
-nvim -c PlugInstall -c q -c CocUpdate -c q -c q
+nvim -c PlugInstall -c q -c q
+nvim -c CocUpdate -c q -c q
 echo "Exit NeoVim..."
 echo "All the plugins are installed!"
 echo "----------------------------------------------------------"
