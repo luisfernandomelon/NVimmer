@@ -233,8 +233,13 @@ sleep 1
 echo "Install ESLint and Prettier-------------------------------"
 eslint -v
 if [ "$?" != 0 ]; then
-    echo "Install eslint and prettier..."
-    npm -g install eslint prettier
+    echo "Install eslint..."
+    npm -g install eslint
+fi
+prettier -v
+if [ "$?" != 0 ]; then
+    echo "Install prettier..."
+    npm -g install prettier
 fi
 echo "----------------------------------------------------------"
 echo ""
@@ -319,7 +324,7 @@ echo ""
 sleep 1
 
 echo "Install NeoVim Plugins------------------------------------"
-nvim -c PlugInstall -c CocInstall -c CocUpdate -c q -c q -c q
+nvim -c PlugInstall -c q -c CocUpdate -c q -c q
 echo "Exit NeoVim..."
 echo "All the plugins are installed!"
 echo "----------------------------------------------------------"
