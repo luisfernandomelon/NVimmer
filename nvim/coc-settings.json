@@ -1,6 +1,8 @@
 {
     //tsserver
-    "javascript.validate.enable": false, //use eslint to check js
+    //use eslint to check js and ts
+    "javascript.validate.enable": false,
+    "typescript.validate.enable": false,
 
     //prettier
     "prettier.useTabs": false,
@@ -23,6 +25,7 @@
     "vetur.validation.template": true,
     "vetur.format.defaultFormatterOptions": {
         "prettyhtml": {
+            "sortAttributes": true,
             "singleQuote": false,
             "printWidth": 120
         }
@@ -55,10 +58,12 @@
     },
 
     //eslint,js
+    "eslint.packageManager": "npm",
+    "prettier.eslintIntegration": true,
     "eslint.autoFix": true,
     "eslint.autoFixOnSave": true,
-    "eslint.filetypes": ["javascript", "javascriptreact", "javascript.jsx", "vue"],
-    "eslint.run": "onType",
+    "eslint.filetypes": ["javascript", "javascriptreact", "javascript.jsx", "vue", "typescript"],
+    "eslint.run": "onSave",
 
     //java
     "java.errors.incompleteClasspath.severity": "ignore"

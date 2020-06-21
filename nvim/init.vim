@@ -16,6 +16,7 @@ let g:coc_global_extensions=[
             \'coc-prettier',
             \'coc-wxml',
             \'coc-tsserver',
+            \'coc-tslint-plugin',
             \'coc-vetur',
             \'coc-stylelint',
             \'coc-angular',
