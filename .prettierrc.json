@@ -2,7 +2,7 @@
     "trailingComma": "none",
     "printWidth": 100,
     "jsxBracketSameLine": true,
-    "vueIndentScriptAndStyle": true,
+    "vueIndentScriptAndStyle": false,
     "tabWidth": 4,
     "semi": false,
     "jsxSingleQuote": false,
