@@ -31,7 +31,7 @@
         }
     },
     "vetur.format.defaultFormatter.js": "prettier-eslint",
-    "vetur.format.defaultFormatter.html": "prettyhtml",
+    "vetur.format.defaultFormatter.html": "prettier",
     "vetur.format.defaultFormatter.css": "prettier",
     "vetur.format.defaultFormatter.less": "prettier",
     "vetur.format.defaultFormatter.scss": "prettier",

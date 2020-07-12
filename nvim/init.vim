@@ -25,8 +25,8 @@ let g:coc_global_extensions=[
             \'coc-emoji'
             \]
 Plug 'honza/vim-snippets'
-"Plug 'Shougo/neco-vim'
-"Plug 'neoclide/coc-neco'
+Plug 'Shougo/neco-vim'
+Plug 'neoclide/coc-neco'
 Plug 'voldikss/vim-floaterm'
 let g:floaterm_position = 'center'
 Plug 'tomasr/molokai'
@@ -61,7 +61,6 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight', { 'on': 'NERDTreeToggle' }
 Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
 Plug 'chemzqm/wxapp.vim', {'for':['wxml','wxss','js']}
 Plug 'OmniSharp/omnisharp-vim', {'for':'cs'}
-"Plug 'OrangeT/vim-csharp', {'for':'cs'}
 Plug 'w0rp/ale', {'for':'cs'}
 Plug 'posva/vim-vue', {'for':'vue'}
 Plug 'hail2u/vim-css3-syntax',{'for':['html','vue','php']}
