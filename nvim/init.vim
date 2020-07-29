@@ -84,17 +84,17 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'Yggdroot/indentLine'
 Plug 'uiiaoo/java-syntax.vim', {'for':'java'}
 Plug 'othree/html5.vim', {'for':['html','vue','php']}
-Plug 'mattn/emmet-vim', {'for':['html','xml','vue','php','typescriptreact','javascript','typescript','typescript.tsx','javascript.jsx']}
-Plug 'alvan/vim-closetag', {'for':['html','xml','vue','php','typescriptreact','javascript','typescript','typescript.tsx','javascript.jsx']}
+Plug 'mattn/emmet-vim', {'for':['html','xml','vue','php','typescriptreact','javascriptreact']}
+Plug 'alvan/vim-closetag', {'for':['html','xml','vue','php','typescriptreact','javascript','typescript','javascriptreact']}
 Plug 'junegunn/fzf', { 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-surround'
 "Plug 'isRuslan/vim-es6', {'for':['html','php','vue','typescriptreact','javascript','typescript','typescript.tsx','javascript.jsx']}
 "Plug 'yuezk/vim-js', {'for':['vue','html','php','typescriptreact','typescript.tsx','javascript.jsx']}
-Plug 'maxmellon/vim-jsx-pretty', {'for':['typescriptreact','javascript','typescript','typescript.tsx','javascript.jsx']}
-Plug 'HerringtonDarkholme/yats.vim', {'for':['typescriptreact','javascript','typescript','typescript.tsx','javascript.jsx']}
+Plug 'maxmellon/vim-jsx-pretty', {'for':['typescriptreact','javascript','typescript','javascriptreact']}
+Plug 'HerringtonDarkholme/yats.vim', {'for':['typescriptreact','javascript','typescript','javascriptreact']}
 let g:vim_jsx_pretty_colorful_config = 1 " default 0
-Plug 'vim-scripts/matchit.zip', {'for':['html','xml','vue','php','typescriptreact','javascript','typescript','typescript.tsx','javascript.jsx']}
+Plug 'vim-scripts/matchit.zip', {'for':['html','xml','vue','php','typescriptreact','javascript','typescript','javascriptreact']}
 Plug 'leshill/vim-json', {'for':'json'}
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight', { 'on': 'NERDTreeToggle' }
@@ -287,7 +287,7 @@ set selection=inclusive
 set wildmenu
 set mousemodel=popup
 set termguicolors
-colorscheme monokain     " 设置背景主题
+colorscheme molokai     " 设置背景主题
 set re=1
 set lazyredraw
 set synmaxcol=0

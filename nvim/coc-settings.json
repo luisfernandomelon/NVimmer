@@ -52,18 +52,13 @@
     "html.format.endWithNewline": false,
     "html.format.wrapAttributes": "auto",
 
-    //emmet
-    "emmet.includeLanguages": {
-        "javascript": "javascriptreact"
-    },
-
     //eslint,js
     "eslint.packageManager": "npm",
     "prettier.eslintIntegration": true,
     "eslint.autoFix": true,
     "eslint.autoFixOnSave": true,
     "eslint.filetypes": ["javascript", "javascriptreact", "javascript.jsx", "vue", "typescript"],
-    "eslint.run": "onSave",
+    "eslint.run": "onType",
 
     //java
     "java.errors.incompleteClasspath.severity": "ignore"
