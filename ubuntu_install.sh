@@ -195,7 +195,6 @@ if [ "$?" != 0 ]; then
     export PATH=$PATH:$HOME/.local/bin
 fi
 pip install neovim
-pip install neovim-remote
 
 echo ""
 echo "Python3:"
