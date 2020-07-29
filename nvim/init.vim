@@ -1,7 +1,9 @@
 "-----------------------vim-plug----------------------------
 call plug#begin('~/.config/nvim/plugged')
-Plug 'neoclide/coc.nvim', {'branch':'release'}
+"IDE启动界面
 Plug 'mhinz/vim-startify'
+"coc插件
+Plug 'neoclide/coc.nvim', {'branch':'release'}
 let g:coc_global_extensions=[
             \'coc-omnisharp',
             \'coc-html',
@@ -16,69 +18,13 @@ let g:coc_global_extensions=[
             \'coc-prettier',
             \'coc-wxml',
             \'coc-tsserver',
-            \'coc-tslint-plugin',
             \'coc-vetur',
             \'coc-stylelint',
-            \'coc-angular',
             \'coc-word',
             \'coc-tabnine',
             \'coc-emoji'
             \]
-Plug 'honza/vim-snippets'
-Plug 'Shougo/neco-vim'
-Plug 'neoclide/coc-neco'
-Plug 'voldikss/vim-floaterm'
-let g:floaterm_position = 'center'
-Plug 'tomasr/molokai'
-Plug 'majutsushi/tagbar', {'on':'TagbarToggle'}
-Plug 'Chiel92/vim-autoformat'
-Plug 'jiangmiao/auto-pairs'
-Plug 'vim-airline/vim-airline'
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
-Plug 'tpope/vim-fugitive'
-Plug 'ryanoasis/vim-devicons'
-Plug 'Yggdroot/indentLine'
-Plug 'udalov/kotlin-vim', {'for':'kotlin'}
-Plug 'uiiaoo/java-syntax.vim', {'for':'java'}
-Plug 'othree/html5.vim', {'for':['html','vue','php','javascript']}
-Plug 'mattn/emmet-vim', {'for':['html','xml','vue','php','typescriptreact','javascript','typescript','typescript.tsx','javascript.jsx']}
-Plug 'alvan/vim-closetag', {'for':['html','xml','vue','php','typescriptreact','javascript','typescript','typescript.tsx','javascript.jsx']}
-Plug 'junegunn/fzf', { 'do': './install --bin' }
-Plug 'junegunn/fzf.vim'
-Plug 'tpope/vim-surround'
-Plug 'pangloss/vim-javascript',{'for':'javascript'}
-Plug 'othree/javascript-libraries-syntax.vim'
-Plug 'isRuslan/vim-es6', {'for':['html','php','vue','typescriptreact','javascript','typescript','typescript.tsx','javascript.jsx']}
-Plug 'yuezk/vim-js', {'for':['vue','html','php','typescriptreact','javascript','typescript','typescript.tsx','javascript.jsx']}
-Plug 'maxmellon/vim-jsx-pretty', {'for':['typescriptreact','javascript','typescript','typescript.tsx','javascript.jsx']}
-Plug 'HerringtonDarkholme/yats.vim', {'for':['typescriptreact','javascript','typescript','typescript.tsx','javascript.jsx']}
-let g:vim_jsx_pretty_colorful_config = 1 " default 0
-Plug 'vim-scripts/matchit.zip', {'for':['html','xml','vue','php','typescriptreact','javascript','typescript','typescript.tsx','javascript.jsx']}
-Plug 'leshill/vim-json', {'for':'json'}
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight', { 'on': 'NERDTreeToggle' }
-Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
-Plug 'chemzqm/wxapp.vim', {'for':['wxml','wxss','js']}
-Plug 'OmniSharp/omnisharp-vim', {'for':'cs'}
-Plug 'w0rp/ale', {'for':'cs'}
-Plug 'posva/vim-vue', {'for':'vue'}
-Plug 'hail2u/vim-css3-syntax',{'for':['html','vue','php']}
-let g:vue_pre_processors = []
-Plug 'sheerun/vim-polyglot'
-let g:polyglot_disabled = [
-            \'css',
-            \'cs',
-            \'markdown',
-            \'vue',
-            \'html',
-            \'javascript',
-            \'typescript',
-            \'kotlin',
-            \'reactjavascript',
-            \'reacttypescript',
-            \'php'
-            \]
+
 "彩虹括号
 Plug 'kien/rainbow_parentheses.vim'
 let g:rbpt_colorpairs = [
@@ -106,6 +52,60 @@ au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 au Syntax * RainbowParenthesesLoadChevrons
+
+"各种代码的配色
+Plug 'sheerun/vim-polyglot'
+let g:polyglot_disabled = [
+            \'css',
+            \'cs',
+            \'markdown',
+            \'reactjavascript',
+            \'reacttypescript',
+            \'php'
+            \]
+
+"其他插件
+Plug 'honza/vim-snippets'
+Plug 'Shougo/neco-vim'
+Plug 'neoclide/coc-neco'
+Plug 'voldikss/vim-floaterm'
+let g:floaterm_position = 'center'
+"主题插件
+Plug 'flazz/vim-colorschemes'
+Plug 'fmoralesc/molokayo'
+Plug 'majutsushi/tagbar', {'on':'TagbarToggle'}
+Plug 'Chiel92/vim-autoformat'
+Plug 'jiangmiao/auto-pairs'
+Plug 'vim-airline/vim-airline'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+Plug 'tpope/vim-fugitive'
+Plug 'ryanoasis/vim-devicons'
+Plug 'Yggdroot/indentLine'
+Plug 'uiiaoo/java-syntax.vim', {'for':'java'}
+Plug 'othree/html5.vim', {'for':['html','vue','php']}
+Plug 'mattn/emmet-vim', {'for':['html','xml','vue','php','typescriptreact','javascript','typescript','typescript.tsx','javascript.jsx']}
+Plug 'alvan/vim-closetag', {'for':['html','xml','vue','php','typescriptreact','javascript','typescript','typescript.tsx','javascript.jsx']}
+Plug 'junegunn/fzf', { 'do': './install --bin' }
+Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-surround'
+"Plug 'isRuslan/vim-es6', {'for':['html','php','vue','typescriptreact','javascript','typescript','typescript.tsx','javascript.jsx']}
+"Plug 'yuezk/vim-js', {'for':['vue','html','php','typescriptreact','typescript.tsx','javascript.jsx']}
+Plug 'maxmellon/vim-jsx-pretty', {'for':['typescriptreact','javascript','typescript','typescript.tsx','javascript.jsx']}
+Plug 'HerringtonDarkholme/yats.vim', {'for':['typescriptreact','javascript','typescript','typescript.tsx','javascript.jsx']}
+let g:vim_jsx_pretty_colorful_config = 1 " default 0
+Plug 'vim-scripts/matchit.zip', {'for':['html','xml','vue','php','typescriptreact','javascript','typescript','typescript.tsx','javascript.jsx']}
+Plug 'leshill/vim-json', {'for':'json'}
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight', { 'on': 'NERDTreeToggle' }
+Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
+Plug 'chemzqm/wxapp.vim', {'for':['wxml','wxss','js']}
+Plug 'OmniSharp/omnisharp-vim', {'for':'cs'}
+"Plug 'OrangeT/vim-csharp', {'for':'cs'}
+Plug 'w0rp/ale', {'for':'cs'}
+Plug 'hail2u/vim-css3-syntax',{'for':['html','vue','php']}
+let g:vue_pre_processors = []
+
 call plug#end()
 
 "------------------------------coc.nvim---------------------------------------
@@ -287,6 +287,7 @@ set selection=inclusive
 set wildmenu
 set mousemodel=popup
 set termguicolors
+colorscheme monokain     " 设置背景主题
 set re=1
 set lazyredraw
 set synmaxcol=0
@@ -294,7 +295,6 @@ set t_Co=256
 "--------------------------------------------显示相关---------------------------------------
 set cul "高亮光标所在行
 set cuc
-color molokai     " 设置背景主题
 set ruler           " 显示标尺
 set showcmd         " 输入的命令显示出来，看的清楚些
 set scrolloff=2     " 光标移动到buffer的顶部和底部时保持3行距离
