@@ -1,8 +1,15 @@
 {
     //tsserver
     //use eslint to check js and ts
+    "tsserver.trace.server": "verbose",
     "javascript.validate.enable": false,
     "typescript.validate.enable": false,
+
+    //emmet
+    "emmet.priority": 1,
+    "emmet.excludeLanguages": [
+        "vue"
+    ],
 
     //prettier
     "prettier.useTabs": false,
@@ -19,6 +26,7 @@
     "prettier.proseWrap": "always",
 
     //vue
+    "vetur.trace.server": "verbose",
     "vetur.format.enable": true,
     "vetur.validation.style": true,
     "vetur.validation.script": true,
@@ -43,6 +51,7 @@
     "json.format.enable": false,
 
     //html
+    "html.trace.server": "verbose",
     "html.enable": true,
     "html.format.enable": true,
     "html.validate.html": true,
@@ -53,13 +62,15 @@
     "html.format.wrapAttributes": "auto",
 
     //eslint,js
-    "eslint.packageManager": "npm",
+    "eslint.trace.server": "verbose",
+    "eslint.packageManager": "yarn",
     "prettier.eslintIntegration": true,
     "eslint.autoFix": true,
     "eslint.autoFixOnSave": true,
-    "eslint.filetypes": ["javascript", "javascriptreact", "javascript.jsx", "vue", "typescript"],
-    "eslint.run": "onType",
+    "eslint.filetypes": ["javascript", "javascriptreact", "typescriptreact", "vue", "typescript"],
+    "eslint.run": "onSave",
 
     //java
+    "java.trace.server": "verbose",
     "java.errors.incompleteClasspath.severity": "ignore"
 }
