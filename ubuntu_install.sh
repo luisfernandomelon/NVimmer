@@ -229,7 +229,7 @@ echo "----------------------------------------------------------"
 echo ""
 sleep 1
 
-echo "Install ESLint and Prettier-------------------------------"
+echo "Install Yarn, ESLint, Prettier-------------------------------"
 eslint -v
 if [ "$?" != 0 ]; then
     echo "Install eslint..."
@@ -239,6 +239,11 @@ prettier -v
 if [ "$?" != 0 ]; then
     echo "Install prettier..."
     npm -g install prettier
+fi
+yarn -v
+if [ "$?" != 0 ]; then
+    echo "Install yarn..."
+    npm -g install yarn
 fi
 echo "----------------------------------------------------------"
 echo ""
