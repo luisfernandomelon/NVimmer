@@ -85,7 +85,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'uiiaoo/java-syntax.vim', {'for':'java'}
 Plug 'othree/html5.vim', {'for':['html','vue','php']}
 Plug 'mattn/emmet-vim', {'for':['html','xml','vue','php','typescriptreact','javascriptreact']}
-Plug 'alvan/vim-closetag', {'for':['html','xml','vue','php','typescriptreact','javascript','typescript','javascriptreact']}
+"Plug 'alvan/vim-closetag', {'for':['html','xml','vue','php','typescriptreact','javascriptreact']}
 Plug 'junegunn/fzf', { 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-surround'
@@ -95,7 +95,11 @@ Plug 'maxmellon/vim-jsx-pretty', {'for':['typescriptreact','javascript','typescr
 Plug 'HerringtonDarkholme/yats.vim', {'for':['typescriptreact','javascript','typescript','javascriptreact']}
 let g:vim_jsx_pretty_colorful_config = 1 " default 0
 Plug 'vim-scripts/matchit.zip', {'for':['html','xml','vue','php','typescriptreact','javascript','typescript','javascriptreact']}
+" json支持
 Plug 'leshill/vim-json', {'for':'json'}
+" markdown支持
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight', { 'on': 'NERDTreeToggle' }
 Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
