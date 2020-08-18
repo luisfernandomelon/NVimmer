@@ -313,6 +313,9 @@ set selection=inclusive
 set wildmenu
 set mousemodel=popup
 set termguicolors
+if(has("mac")||has("macunix"))
+    set termguicolors!
+endif
 colorscheme molokai     " 设置背景主题
 set re=1
 set lazyredraw
