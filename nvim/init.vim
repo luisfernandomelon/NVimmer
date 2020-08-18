@@ -10,10 +10,14 @@ let g:coc_global_extensions=[
             \'coc-eslint',
             \'coc-snippets',
             \'coc-emmet',
+            \'coc-clangd',
             \'coc-java',
+            \'coc-pairs',
             \'coc-json',
+            \'coc-lists',
             \'coc-highlight',
             \'coc-css',
+            \'coc-git',
             \'coc-phpls',
             \'coc-prettier',
             \'coc-wxml',
@@ -21,6 +25,7 @@ let g:coc_global_extensions=[
             \'coc-vetur',
             \'coc-stylelint',
             \'coc-word',
+            \'coc-python',
             \'coc-tabnine',
             \'coc-emoji'
             \]
@@ -72,10 +77,25 @@ Plug 'voldikss/vim-floaterm'
 let g:floaterm_position = 'center'
 "主题插件
 Plug 'flazz/vim-colorschemes'
+Plug 'jacoborus/tender.vim'
+" colorscheme tender
+Plug 'rakr/vim-one'
+" colorscheme one
+Plug 'drewtempelmeyer/palenight.vim'
+" colorscheme palenight
+Plug 'KeitaNakamura/neodark.vim'
+" colorscheme neodark
+Plug 'iCyMind/NeoSolarized'
+" colorscheme NeoSolarized
+Plug 'crusoexia/vim-monokai'
+" colorscheme monokai
+Plug 'morhetz/gruvbox'
+" colorscheme gruvbox
+
 Plug 'fmoralesc/molokayo'
 Plug 'majutsushi/tagbar', {'on':'TagbarToggle'}
 Plug 'Chiel92/vim-autoformat'
-Plug 'jiangmiao/auto-pairs'
+"Plug 'jiangmiao/auto-pairs'
 Plug 'vim-airline/vim-airline'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
@@ -95,6 +115,8 @@ Plug 'maxmellon/vim-jsx-pretty', {'for':['typescriptreact','javascript','typescr
 Plug 'HerringtonDarkholme/yats.vim', {'for':['typescriptreact','javascript','typescript','javascriptreact']}
 let g:vim_jsx_pretty_colorful_config = 1 " default 0
 Plug 'vim-scripts/matchit.zip', {'for':['html','xml','vue','php','typescriptreact','javascript','typescript','javascriptreact']}
+"CLang支持
+Plug 'jackguo380/vim-lsp-cxx-highlight'
 " json支持
 Plug 'leshill/vim-json', {'for':'json'}
 " markdown支持

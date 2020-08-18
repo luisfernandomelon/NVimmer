@@ -20,7 +20,7 @@ NVimmer 是新版的 [Vimmer](https://github.com/devilyouwei/Vimmer)，NVimmer �
 4. vue
 5. TypeScript
 6. PHP
-7. C/C++
+7. C/C++ [增强]
 8. Markdown
 9. JSON
 10. Wechat wxml

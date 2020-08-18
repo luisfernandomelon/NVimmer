@@ -22,7 +22,7 @@ NVimmer is a new version of [Vimmer](https://github.com/devilyouwei/Vimmer). The
 4. vue
 5. TypeScript
 6. PHP
-7. C/C++
+7. C/C++ **[enhanced]**
 8. Markdown
 9. JSON
 10. Wechat wxml
