@@ -50,7 +50,8 @@ if [ "$status" != 0 ]; then
     apt install -y sudo
 fi
 sudo apt update
-sudo apt install -y cmake build-essential automake checkinstall git ssl-cert
+sudo apt install -y cmake build-essential automake checkinstall git ssl-cert clangd-9
+sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-9 100
 echo "-----------------------------------------------------------"
 echo ""
 sleep 1
