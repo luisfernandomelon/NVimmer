@@ -4,7 +4,7 @@ _Continuously updating..._
 
 # NVimmer(EN)
 
-[Chinese Readme](README_ZH.md)
+[中文说明](README_ZH.md)
 
 A simple, fast and efficient **VIM IDE Configuration**, it is especially nice for the full stack developers on Linux.
 
