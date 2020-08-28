@@ -6,13 +6,15 @@ _Continuously updating..._
 
 [Chinese Readme](README_ZH.md)
 
-A simple, fast and efficient **VIM IDE Configuration**, it is especially nice for the full stack developers.
+A simple, fast and efficient **VIM IDE Configuration**, it is especially nice for the full stack developers on Linux.
 
 With Monaco nerd font on Linux.
 
 NVimmer is a new version of [Vimmer](https://github.com/devilyouwei/Vimmer). The configuration of NVimmer will be based on NeoVim instead of Vim.
 
-**Attention: NVimmer is going to replace Vimmer.**
+For **Windows** [Click Here](https://github.com/devilyouwei/Vimmer)
+
+For **Mac** [iVimmer](https://github.com/husterlf/iVimmer)
 
 ## Support
 
@@ -51,10 +53,10 @@ wget https://raw.githubusercontent.com/devilyouwei/NVimmer/master/ubuntu_install
 
 **Script Fail**
 
-1. During the process of installations, the script may fail to download something, especially in China.
-2. If the script is interrupted or exit with errors, please run it again, until it success.
-3. After all the installations are finished, if nvim still doesn't work well, same with point 2, try again!
-4. For the first time, please restart terminal and then open neovim.
+-   During the process of installations, the script may fail to download something, especially in China.
+-   If the script is interrupted or exit with errors, please run it again, until it success.
+-   After all the installations are finished, if nvim still doesn't work well, same with point 2, try again!
+-   For the first time, please restart terminal and then open neovim.
 
 **Monaco Nerd Fonts**
 

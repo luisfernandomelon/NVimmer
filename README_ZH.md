@@ -10,7 +10,11 @@ _持续更新中......_
 
 内置 Monaco Nerd 字体！
 
-NVimmer 是新版的 [Vimmer](https://github.com/devilyouwei/Vimmer)，NVimmer 的配置将会完全基于 NeoVim 而不再是 Vim
+NVimmer 是新版的 [Vimmer](https://github.com/devilyouwei/Vimmer)，NVimmer 的配置将会完全基于 NeoVim。
+
+**Windows** [Click Here](https://github.com/devilyouwei/Vimmer)
+
+**Mac** [iVimmer](https://github.com/husterlf/iVimmer)
 
 ## 适用于
 
