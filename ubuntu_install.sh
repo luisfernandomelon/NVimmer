@@ -35,7 +35,7 @@ echo ""
 byellow '2. 中国地区请更换gem, npm, pip等包管理器的镜像为国内源'
 byellow '(When in China, change the npm, gem, pip source to China Mainland)'
 echo ""
-byellow '3. 建议您的系统是干净的，如果已经有vim或者neovim的配置，请提前备份好，按<Ctrl-C>结束该脚本'
+byellow '3. 建议您的系统是干净的，如果已经有vim或者neovim的配置，请提前备份好，会被覆盖，按<Ctrl-C>结束该脚本'
 echo ""
 byellow "Waiting for installing, 3 seconds..."
 echo ""
@@ -50,8 +50,8 @@ if [ "$status" != 0 ]; then
     apt install -y sudo
 fi
 sudo apt update
-sudo apt install -y cmake build-essential automake checkinstall git ssl-cert clangd-9
-sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-9 100
+sudo apt install -y cmake build-essential automake git ssl-cert clang-tools
+#sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-9 100
 echo "-----------------------------------------------------------"
 echo ""
 sleep 1
@@ -113,6 +113,7 @@ if [ "$status" != 0 ]; then
     export NVM_DIR="$HOME/.nvm"
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
     [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+    source ~/.bashrc
     nvm install stable
 fi
 echo "-----------------------------------------------------------"

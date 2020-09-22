@@ -35,7 +35,7 @@ NVimmer 是新版的 [Vimmer](https://github.com/devilyouwei/Vimmer)，NVimmer �
 
 注：所有的现代前端框架的代码 format 和 lint 默认是 **prettier+eslint**！
 
-## 【重磅推荐】Ubuntu Shell 脚本一键安装 🚤 🚤 🚤
+## 【重磅推荐】Ubuntu/Deepin Shell 脚本一键安装 🚤 🚤 🚤
 
 执行以下命令行，省事省心的安装～ ✌
 
@@ -53,9 +53,17 @@ wget https://raw.githubusercontent.com/devilyouwei/NVimmer/master/ubuntu_install
 
 **安装过程出现问题** 🤔 🤔 🤔
 
-任何脚本运行出现问题或者安装后 nvim 无法正常工作的现象出现，可以先重新启动 Terminal，如果 nvim 还是有报错，那请重新执行安装脚本，本人的环境为 ubuntu18.04+（干净），亲测可用，失败统统重新运行，很多东西从 github 下载会被打断或者很慢，你懂得～
+任何脚本运行出现问题或者安装后 nvim 无法正常工作的现象出现，可以先重新启动 Terminal，如果 nvim 还是有报错，那请重新执行安装脚本，本人的环境为 ubuntu 18.04+（干净），亲测可用，失败统统重新运行，很多东西从 github 下载会被打断或者很慢，你懂得～
 
-**苹果字体** 🍏
+在大陆请把 pip，npm 源改成国内源
+
+raw 无法下载的话在/etc/hosts 下添加如下：
+
+```
+199.232.28.133 raw.githubusercontent.com
+```
+
+**苹果 Monaco 字体** 🍏
 
 用 **wget** 下载字体（必须 wget），然后直接打开 terminal 在首选项中的字体改为：`Monaco Nerd Font` 即可
 

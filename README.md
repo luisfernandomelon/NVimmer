@@ -35,7 +35,7 @@ For **Mac** [iVimmer](https://github.com/husterlf/iVimmer)
 
 NVimmer will use **Prettier and eslint** as the default linter and formatter for the fontend!
 
-## [Recommended] Ubuntu Shell Onekey Install 🚤 🚤 🚤
+## [Recommended] Ubuntu/Deepin Shell Onekey Install 🚤 🚤 🚤
 
 Execute the following commands, install everything! ✌
 
@@ -56,7 +56,7 @@ wget https://raw.githubusercontent.com/devilyouwei/NVimmer/master/ubuntu_install
 -   During the process of installations, the script may fail to download something, especially in China.
 -   If the script is interrupted or exit with errors, please run it again, until it success.
 -   After all the installations are finished, if nvim still doesn't work well, same with point 2, try again!
--   For the first time, please restart terminal and then open neovim.
+-   For the first time to start nvim, please restart terminal and then open it.
 
 **Monaco Nerd Fonts**
 
