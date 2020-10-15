@@ -251,15 +251,14 @@ echo "----------------------------------------------------------"
 echo ""
 sleep 1
 
-echo "Install Astyle--------------------------------------------"
+echo "Install astyle--------------------------------------------"
 sudo apt install -y astyle
 echo "----------------------------------------------------------"
 echo ""
 sleep 1
 
-echo "Install Ctags---------------------------------------------"
-sudo snap install universal-ctags
-sudo apt install ctags
+echo "Install universal ctags---------------------------------------------"
+sudo apt install universal-ctags
 echo "----------------------------------------------------------"
 echo ""
 sleep 1
