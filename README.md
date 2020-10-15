@@ -238,10 +238,10 @@ npm install -g eslint
 
 Remember, put `eslint-plugin-*` only in your **project folder**, not **globally**!
 
-**Install 'ctags' for tagbar and 'astyle' for AutoFormat**
+**Install 'universal-ctags' for tagbar and 'astyle' for AutoFormat**
 
 ```bash
-sudo apt install ctags
+sudo apt install universal-ctags
 sudo apt install astyle
 sudo apt install clang-format
 sudo snap install shfmt

@@ -230,10 +230,10 @@ npm install -g eslint
 
 如需用到这些 lint 插件，正确的做法应该是在开发**项目中**配置 package.json 或者 eslintrc 文件来配置规则，然后使用'npm install'局部安装到**项目中**，
 
-4. 针对 tagbar 安装 ctags，针对 autoformat 安装 astyle
+4. 针对 tagbar 安装 universal-ctags，针对 autoformat 安装 astyle
 
 ```bash
-sudo apt install ctags
+sudo apt install universal-ctags
 sudo apt install astyle
 sudo apt install clang-format
 sudo snap install shfmt
