@@ -259,6 +259,7 @@ sleep 1
 
 echo "Install Ctags---------------------------------------------"
 sudo snap install universal-ctags
+sudo apt install ctags
 echo "----------------------------------------------------------"
 echo ""
 sleep 1
