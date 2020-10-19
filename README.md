@@ -2,6 +2,8 @@
 
 _Continuously updating..._
 
+![example](example/ex0.png)
+
 # NVimmer(EN)
 
 [中文说明](README_ZH.md)
@@ -18,24 +20,24 @@ For **Mac** [iVimmer](https://github.com/husterlf/iVimmer)
 
 ## Support
 
-1. HTML CSS JS **[eslint]**
-2. Java **[color enhanced]**
-3. C# **[enhanced]**
+1. HTML CSS JS
+2. Java
+3. C#
 4. vue
 5. TypeScript
 6. PHP
-7. C/C++ **[enhanced]**
+7. C/C++
 8. Markdown
 9. JSON
 10. Wechat wxml
-11. react js/jsx/tsx **[new]**
-12. Kotlin **[weakly support]**
-13. English Words 1K+ **[new]**
-14. Emoji (type `:` select emoji) **[new]**
+11. react js/jsx/tsx
+12. Kotlin
+13. English Words 1K+
+14. Emoji (type `:` select emoji)
 
 NVimmer will use **Prettier and eslint** as the default linter and formatter for the fontend!
 
-## [Recommended] Ubuntu/Deepin Shell Onekey Install 🚤 🚤 🚤
+## [Recommended] Ubuntu/Deepin Onekey Install 🚤 🚤 🚤
 
 Execute the following commands, install everything! ✌
 
@@ -66,9 +68,9 @@ Use wget (must) to download the font, and then open a terminal preference to con
 wget https://github.com/devilyouwei/NVimmer/raw/master/fonts/linux/MonacoNerd.ttf -P ~/.fonts/
 
 fc-cache -vf
+```
 
 # restart the terminal
-```
 
 Or, You would like to download and install the font manually by double clicking it.
 
@@ -129,17 +131,16 @@ or
 
 **use nvm**
 
-```
+```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 
-export NVM_DIR="$HOME/.nvm"
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
-nvm install table
+nvm install stable
 ```
 
-The node version in ubuntu apt is too old, please refer to the node official website to install the latest version. Mine is 13 and the node official website is [https://nodejs.org](https://nodejs.org/)
+The node version in ubuntu apt is too old, please refer to the node official website to install the latest version. Mine is 14 and the node official website is [https://nodejs.org](https://nodejs.org/)
 
 Attention: **DON'T USE SNAP** to install nodejs! NeoVim `:checkhealth` not passed!
 
@@ -286,8 +287,6 @@ sudo apt-get install lazygit
 -   Find English words in vim, should in 'Insert Mode' and press: **Ctrl-X** then **Ctrl-W**
 
 ## Examples :tada: :tada: :tada:
-
-![example](example/ex0.png)
 
 ![example](example/ex1.png)
 

@@ -2,6 +2,8 @@
 
 _持续更新中......_
 
+![example](example/ex0.png)
+
 # NVimmer(ZH)
 
 [English Readme](README.md)
@@ -41,7 +43,7 @@ NVimmer 是新版的 [Vimmer](https://github.com/devilyouwei/Vimmer)，NVimmer �
 
 🌟 推荐使用 **curl**
 
-```
+```bash
 curl -o ubuntu_install.sh https://raw.githubusercontent.com/devilyouwei/NVimmer/master/ubuntu_install.sh && bash ubuntu_install.sh
 ```
 
@@ -71,9 +73,9 @@ raw 无法下载的话在/etc/hosts 下添加如下：
 wget https://github.com/devilyouwei/NVimmer/raw/master/fonts/linux/MonacoNerd.ttf -P ~/.fonts/
 
 fc-cache -vf
+```
 
 # 重启终端
-```
 
 或者手动下载后双击安装！需要您安装后手动配置终端字体。
 
@@ -119,25 +121,24 @@ cp ./.prettierrc.json ~/
 curl -sL install-node.now.sh/lts | bash
 ```
 
-或者，nvm 安装
+或者，nvm 安装（墙裂建议）
 
 ```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 nvm install stable
 ```
 
-也可参考 node 官网安装最新版，本人的环境是 13
+也可参考 node 官网安装最新版，本人的环境是 14
 
 墙裂推荐使用 [nvm](https://github.com/nvm-sh/nvm) 来安装和管理 nodejs，更加清洁和方便，还能随便改版本
 
 [https://nodejs.org](https://nodejs.org/)
 
-注意：这里千万**不要用 snap 安装**，无法通过 `:checkhealth` 检查
+注意：这里千万 **不要用 snap 安装**，无法通过 `:checkhealth` 检查
 
 另外：nvm 在 `.bashrc` 中添加的脚本可能拖慢打开 bash 的速度
 
@@ -212,7 +213,7 @@ sudo gem install neovim
 
 Ruby 更换国内源
 
-```
+```bash
 gem sources --add https://gems.ruby-china.com/ --remove https://rubygems.org/
 gem sources -l
 # https://gems.ruby-china.com
@@ -241,7 +242,7 @@ sudo snap install shfmt
 
 5. 安装 lazy git (推荐)
 
-```
+```bash
 sudo add-apt-repository ppa:lazygit-team/release
 sudo apt-get update
 sudo apt-get install lazygit
@@ -249,14 +250,14 @@ sudo apt-get install lazygit
 
 6. Python
 
-```
+```bash
 pip install neovim
 pip3 install neovim
 ```
 
 7. Perl
 
-```
+```bash
 sudo apt install cpanminus
 sudo cpanm Neovim::Ext
 echo 'eval $(perl -I $HOME/perl5/lib/perl5 -Mlocal::lib)' >>~/.bashrc
@@ -300,7 +301,7 @@ echo 'eval $(perl -I $HOME/perl5/lib/perl5 -Mlocal::lib)' >>~/.bashrc
 
 -   "System limit for number of file watchers reached"
 
-```
+```bash
 echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 sudo sysctl --system
 ```
@@ -314,8 +315,6 @@ sudo sysctl --system
 [https://github.com/devilyouwei/Vimmer](https://github.com/devilyouwei/Vimmer)
 
 ## 示例 :tada: :tada: :tada:
-
-![example](example/ex0.png)
 
 ![example](example/ex1.png)
 
