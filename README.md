@@ -69,12 +69,33 @@ wget https://github.com/devilyouwei/NVimmer/raw/master/fonts/linux/MonacoNerd.tt
 
 fc-cache -vf
 ```
-
 # restart the terminal
 
 Or, You would like to download and install the font manually by double clicking it.
 
 [Download Monaco Nerd Font](https://github.com/devilyouwei/NVimmer/raw/master/fonts/linux/MonacoNerd.ttf)
+
+## Examples :tada: :tada: :tada:
+
+![example](example/ex1.png)
+
+![example](example/ex2.png)
+
+![example](example/ex3.png)
+
+![example](example/ex4.png)
+
+![example](example/ex5.png)
+
+![example](example/ex6.png)
+
+![example](example/ex7.png)
+
+![example](example/ex8.png)
+
+![example](example/ex9.png)
+
+![example](example/ex10.png)
 
 ## Quick Start (Manually, Step by Step) 🔨 🔨 🔨
 
@@ -285,28 +306,6 @@ sudo apt-get install lazygit
 -   Find buffers, press: **Ctrl-B** or **fb**
 -   Find files in current path, press: **Ctrl-F** or **Ctrl-P** or **ff**
 -   Find English words in vim, should in 'Insert Mode' and press: **Ctrl-X** then **Ctrl-W**
-
-## Examples :tada: :tada: :tada:
-
-![example](example/ex1.png)
-
-![example](example/ex2.png)
-
-![example](example/ex3.png)
-
-![example](example/ex4.png)
-
-![example](example/ex5.png)
-
-![example](example/ex6.png)
-
-![example](example/ex7.png)
-
-![example](example/ex8.png)
-
-![example](example/ex9.png)
-
-![example](example/ex10.png)
 
 ## My Global npm node modules
 
