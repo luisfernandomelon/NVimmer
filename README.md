@@ -68,8 +68,9 @@ Use wget (must) to download the font, and then open a terminal preference to con
 wget https://github.com/devilyouwei/NVimmer/raw/master/fonts/linux/MonacoNerd.ttf -P ~/.fonts/
 
 fc-cache -vf
-```
+
 # restart the terminal
+```
 
 Or, You would like to download and install the font manually by double clicking it.
 
