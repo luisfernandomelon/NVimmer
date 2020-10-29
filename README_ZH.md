@@ -70,7 +70,10 @@ raw 无法下载的话在/etc/hosts 下添加如下：
 用 **wget** 下载字体（必须 wget），然后直接打开 terminal 在首选项中的字体改为：`Monaco Nerd Font` 即可
 
 ```bash
-wget https://github.com/devilyouwei/linux-font/blob/master/Monaco/MonacoNerd.ttf -P ~/.fonts/
+
+wget https://github.com/devilyouwei/linux-font/blob/master/Monaco/Nerd/MonacoNerd.ttf -P ~/.fonts/
+#deepin-terminal
+wget https://github.com/devilyouwei/linux-font/blob/master/Monaco/Nerd/MonacoNerdMono.ttf -P ~/.fonts/
 
 fc-cache -vf
 
@@ -80,7 +83,7 @@ fc-cache -vf
 
 或者手动下载后双击安装！需要您安装后手动配置终端字体。
 
-[下载 Monaco Nerd Font](https://github.com/devilyouwei/linux-font/blob/master/Monaco/MonacoNerd.ttf)
+[下载 Monaco Nerd Font](https://github.com/devilyouwei/linux-font/blob/master/Monaco/Nerd/MonacoNerdMono.ttf)
 
 ## 手动开始，按部就班 🔨 🔨 🔨
 
