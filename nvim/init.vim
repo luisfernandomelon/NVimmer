@@ -373,7 +373,7 @@ map <C-L> :bp<CR>        "上一个缓冲区
 map <C-Left> :bn<CR>            "下一个缓冲区
 map <C-Right> :bp<CR>        "上一个缓冲区
 "代码格式化---------------------------------------------------------------------------------------
-noremap <F12> :syntax sync fromstart<CR>:Format<CR>
+noremap <F12> :Format<CR>:syntax sync fromstart<CR>
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 "前端主要使用Prettier美化
 autocmd filetype yaml nnoremap <buffer> <F12> :Prettier<CR>
@@ -391,9 +391,9 @@ let g:floaterm_keymap_toggle = '<F4>'
 "tagbar
 nmap <F9> :TagbarToggle<CR>
 "按F5保存
-nmap <F5> :syntax sync fromstart<CR>:w<CR>
+nmap <F5> :w<CR>:syntax sync fromstart<CR>
 "按F6编译运行
-nmap <F6> :syntax sync fromstart<CR>:call Compile()<CR>
+nmap <F6> :call Compile()<CR>:syntax sync fromstart<CR>
 func! Compile()
     exec "w"
     if &filetype == 'c'
