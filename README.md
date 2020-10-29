@@ -65,10 +65,10 @@ wget https://raw.githubusercontent.com/devilyouwei/NVimmer/master/ubuntu_install
 Use wget (must) to download the font, and then open a terminal preference to config the font to `Monaco Nerd Font`
 
 ```bash
-wget https://github.com/devilyouwei/linux-font/blob/master/Monaco/Nerd/MonacoNerd.ttf -P ~/.fonts/
+wget https://github.com/devilyouwei/linux-font/blob/master/Monaco/Nerd/MonacoNerd.ttf?raw=true -O ~/.fonts/MonacoNerd.ttf
 
 #deepin-terminal
-wget https://github.com/devilyouwei/linux-font/blob/master/Monaco/Nerd/MonacoNerdMono.ttf -P ~/.fonts/
+wget https://github.com/devilyouwei/linux-font/blob/master/Monaco/Nerd/MonacoNerdMono.ttf?raw=true -O ~/.fonts/MonacoNerdMono.ttf
 
 fc-cache -vf
 
