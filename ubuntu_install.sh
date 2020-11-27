@@ -27,12 +27,13 @@ green "| |\\  | \\ V / | | | | | | | | | | | |  __/ |   "
 green "|_| \\_|  \\_/  |_|_| |_| |_|_| |_| |_|\\___|_|"
 
 green "Welcome to NVimmer, Make your NeoVim/Vim perform as an IDE!!!"
+green '专门为 NeoVim 打造的一键式IDE脚本'
 blue "Email: devilyouwei@gmail.com"
 
 echo ""
 byellow '1. 如在大陆地区使用，有些插件需要科学上网...'
 echo ""
-byellow '2. 中国地区请更换gem, npm, pip等包管理器的镜像为国内源'
+byellow '2. 大陆地区请更换gem, npm, pip等包管理器的镜像为国内源'
 byellow '(When in China, change the npm, gem, pip source to China Mainland)'
 echo ""
 byellow '3. 建议您的系统是干净的，如果已经有vim或者neovim的配置，请提前备份好，会被覆盖，按<Ctrl-C>结束该脚本'
@@ -177,24 +178,7 @@ if [ "$?" -eq 0 ]; then
     npm -g install neovim
 fi
 
-echo ""
-echo "Python2:"
-pip --version
-if [ "$?" != 0 ]; then
-    sudo apt install -y python-pip
-fi
-# check pip again because of ubuntu 20.04, there is no python-pip avaliable in apt
-pip --version
-if [ "$?" != 0 ]; then
-    curl https://bootstrap.pypa.io/get-pip.py | python
-    if [ "$?" != 0 ]; then
-        red "Network Error: curl fail to download 'pip'"
-        exit 1
-    fi
-    rm get-pip.py
-    export PATH=$PATH:$HOME/.local/bin
-fi
-pip install neovim
+# never support python2 and pip2
 
 echo ""
 echo "Python3:"
@@ -329,7 +313,6 @@ sleep 1
 
 echo "Install NeoVim Plugins------------------------------------"
 nvim -c PlugInstall -c q -c q
-nvim -c CocUpdate -c q -c q
 echo "Exit NeoVim..."
 echo "All the plugins are installed!"
 echo "----------------------------------------------------------"
@@ -369,4 +352,5 @@ blue '2ND Ave Long Branch NJ US'
 blue '@devilyouwei'
 echo ""
 byellow '(Remeber to restart the terminal or reconnect to the server, then type nvim!)'
+byellow '使用neovim前请先重启终端，然后输入vi即可'
 echo ""

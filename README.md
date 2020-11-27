@@ -190,35 +190,7 @@ Or run in terminal
 nvim -c PlugInstall
 ```
 
-### Install coc plugins
-
-The following plugins are COC plugins.
-
-For auto complete, check errors/warnings, autoformat, color highlight and other ide functions, you can choose to install them according to your main language.
-
-The following plugins will be installed automotically when you open NeoVim (because I config them in init.vim).
-
-Of course, you can input the following commands to install them manually again in nvim or remove them from init.vim if you don't need it.
-
-```bash
-:CocInstall coc-html
-:CocInstall coc-eslint
-:CocInstall coc-snippets
-:CocInstall coc-pairs
-:CocInstall coc-emmet
-:CocInstall coc-java
-:CocInstall coc-json
-:CocInstall coc-highlight
-:CocInstall coc-css
-:CocInstall coc-phpls
-:CocInstall coc-stylelint
-:CocInstall coc-omnisharp
-:CocInstall coc-prettier
-:CocInstall coc-wxml
-:CocInstall coc-tsserver
-:CocInstall coc-vetur
-:CocInstall coc-angular
-```
+Note: coc-plugins will be installed automotically when you start nvim.
 
 ### Supplementary Installation
 
@@ -248,9 +220,11 @@ echo 'eval $(perl -I $HOME/perl5/lib/perl5 -Mlocal::lib)' >>~/.bashrc
 **For Python**
 
 ```bash
-pip install neovim #py2
 pip3 install neovim #py3
+pip3 install neovim-remote
 ```
+
+Note: never support python2 any more, include pip2
 
 **For front-end and JS developers**
 

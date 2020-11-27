@@ -160,40 +160,11 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 
 或者在终端中执行：
 
-```
+```bash
 nvim -c PlugInstall
 ```
 
-### Coc 插件安装
-
-以下插件是 Coc 安装插件，为了自动补全，自动纠错，格式化，色彩高亮等 IDE 功能准备的，可以根据自己语言需求选择安装。
-
-打开 nvim，输入以下命令手动安装 coc 插件
-
-(以下插件也会在 NeoVim 打开后逐个安装，不需要一个个输入)
-
-```bash
-:CocInstall coc-html
-:CocInstall coc-eslint
-:CocInstall coc-snippets
-:CocInstall coc-pairs
-:CocInstall coc-emmet
-:CocInstall coc-java
-:CocInstall coc-json
-:CocInstall coc-highlight
-:CocInstall coc-css
-:CocInstall coc-phpls
-:CocInstall coc-stylelint
-:CocInstall coc-omnisharp
-:CocInstall coc-prettier
-#微信小程序
-:CocInstall coc-wxml
-#TS和JS
-:CocInstall coc-tsserver
-#vue
-:CocInstall coc-vetur
-:CocInstall coc-angular
-```
+注意：coc 的插件不需要手动安装，打开 nvim 会自动安装
 
 ### 其他安装
 
@@ -254,9 +225,11 @@ sudo apt-get install lazygit
 6. Python
 
 ```bash
-pip install neovim
 pip3 install neovim
+pip3 install neovim-remote
 ```
+
+注意：不再支持 python2 和 pip2
 
 7. Perl
 
@@ -271,22 +244,22 @@ echo 'eval $(perl -I $HOME/perl5/lib/perl5 -Mlocal::lib)' >>~/.bashrc
 **快捷键**
 
 -   **Ctrl-C, Ctrl-V, Ctrl-X** 已经映射好了，可以和系统剪贴板互通，复制粘贴
--   Emmet html 自动生成闭合 html 标签, 插入模式下按：**Ctrl-O** 参考'Emmet'官网用法
+-   Emmet html 自动生成闭合 html 标签, 插入模式下按： **Ctrl-O** 参考'Emmet'官网用法
 -   打开浮动终端: **F4**
 -   保存: **F5**
 -   保存并编译运行: **F6**
--   格式化代码：**F12**
+-   格式化代码： **F12**
 -   清除空行: **F2**
 -   打开当前目录文件树: **F3**
 -   打开 Tagbar: **F9** (需要 ctags)
 -   自动补全：Coc 自动补全插件，按 **Tab** 键可以自动补全
--   buffer 之间切换：**Ctrl+H**，**Ctrl+L**，**Ctrl+左键**，**Ctrl+右键**
+-   buffer 之间切换： **Ctrl+H**， **Ctrl+L**， **Ctrl+左键**， **Ctrl+右键**
 -   Tab 切换：同上，把 Ctrl 换成 **Shift**
 -   寻找函数，类的原始定义，输入 **'gd'**
--   标签全局搜索，可以搜索全局搜索函数，类，变量定义等，**normal 模式**下, 按: **Ctrl-T** 或 **ft**
+-   标签全局搜索，可以搜索全局搜索函数，类，变量定义等， **normal 模式**下, 按: **Ctrl-T** 或 **ft**
 -   搜索 buffers, **normal 模式**下, 按: **Ctrl-B** 或 **fb**
 -   搜索当前路径下的文件, **normal 模式**下, 按: **Ctrl-F** or **Ctrl-P** 或 **ff**
--   在 vim 下搜索英语单词！**插入模式**下，连续按下: **Ctrl-X** **Ctrl-W**
+-   在 vim 下搜索英语单词！ **插入模式**下，连续按下: **Ctrl-X** **Ctrl-W**
 
 ## 问题
 
