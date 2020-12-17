@@ -56,9 +56,9 @@ wget https://raw.githubusercontent.com/devilyouwei/NVimmer/master/ubuntu_install
 **Script Fail**
 
 -   During the process of installations, the script may fail to download something, especially in China.
--   If the script is interrupted or exit with errors, please run it again, until it success.
+-   If the script is interrupted or exit with errors, please run it again, until it success, or try to change the network environment.
 -   After all the installations are finished, if nvim still doesn't work well, same with point 2, try again!
--   For the first time to start nvim, please restart terminal and then open it.
+-   For the first time to start nvim, please restart terminal and then reopen nvim.
 
 **Monaco Nerd Fonts**
 
@@ -100,6 +100,7 @@ Or, You would like to download and install the font manually by double clicking 
 ![example](example/ex9.png)
 
 ![example](example/ex10.png)
+
 
 ## Quick Start (Manually, Step by Step) 🔨 🔨 🔨
 

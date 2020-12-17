@@ -7,22 +7,21 @@
 
     //emmet
     "emmet.priority": 1,
-    "emmet.excludeLanguages": [
-        "vue"
-    ],
+    "emmet.excludeLanguages": ["vue"],
 
     //prettier
-    "prettier.useTabs": false,
+    "prettier.trailingComma": "none",
+    "prettier.printWidth": 120,
+    "prettier.jsxBracketSameLine": true,
     "prettier.tabWidth": 4,
     "prettier.semi": false,
-    "prettier.singleQuote": true,
-    "prettier.jsxBracketSameLine": true,
-    "prettier.printWidth": 120,
     "prettier.jsxSingleQuote": false,
     "prettier.bracketSpacing": true,
-    "prettier.trailingComma": "none",
-    "prettier.arrowParens": "avoid",
     "prettier.htmlWhitespaceSensitivity": "ignore",
+    "prettier.singleQuote": true,
+
+    "prettier.useTabs": false,
+    "prettier.arrowParens": "avoid",
     "prettier.proseWrap": "always",
 
     //vue

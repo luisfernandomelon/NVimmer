@@ -52,7 +52,6 @@ if [ "$status" != 0 ]; then
 fi
 sudo apt update
 sudo apt install -y cmake build-essential automake git ssl-cert clang-tools
-#sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-9 100
 echo "-----------------------------------------------------------"
 echo ""
 sleep 1
@@ -105,7 +104,7 @@ status=$?
 if [ "$status" != 0 ]; then
     echo "Install Node.js..."
     curl -o ~/.nvm/install.sh --create-dirs \
-        https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh
+        https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh
     if [ "$?" != 0 ]; then
         red "Network Error: curl fail to download 'nvm'"
         exit 1
@@ -258,7 +257,7 @@ echo "----------------------------------------------------------"
 echo ""
 sleep 1
 
-green "Curl and Config Your NeoVim-------------------------------"
+green "Config Your NeoVim---------------------------------------"
 curl -o ~/.config/nvim/init.vim --create-dirs \
     https://raw.githubusercontent.com/devilyouwei/NVimmer/master/nvim/init.vim
 if [ "$?" != 0 ]; then
@@ -273,19 +272,6 @@ if [ "$?" != 0 ]; then
     exit 1
 fi
 
-curl -o ~/.eslintrc.json \
-    https://raw.githubusercontent.com/devilyouwei/NVimmer/master/.eslintrc.json
-if [ "$?" != 0 ]; then
-    red "Network Error: curl fail to download '.eslintrc.json'"
-    exit 1
-fi
-
-curl -o ~/.prettierrc.json \
-    https://raw.githubusercontent.com/devilyouwei/NVimmer/master/.prettierrc.json
-if [ "$?" != 0 ]; then
-    red "Network Error: curl fail to download '.prettierrc.json'"
-    exit 1
-fi
 green "Config successfully!"
 green "----------------------------------------------------------"
 echo ""

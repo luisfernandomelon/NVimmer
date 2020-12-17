@@ -35,7 +35,7 @@ NVimmer 是新版的 [Vimmer](https://github.com/devilyouwei/Vimmer)，NVimmer �
 13. 英语单词 1000 多自动补全 **[new]**
 14. Emoji 表情补全 (输入`:`后自动弹出) **[new]**
 
-注：所有的现代前端框架的代码 format 和 lint 默认是 **prettier+eslint**！
+注：所有的现代前端框架的代码 format 和 lint 默认是 **prettier+eslint**！不要使用全局eslint了！
 
 ## 【重磅推荐】Ubuntu/Deepin Shell 脚本一键安装 🚤 🚤 🚤
 
