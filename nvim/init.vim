@@ -14,6 +14,8 @@ let g:coc_global_extensions=[
             \'coc-java',
             \'coc-pairs',
             \'coc-json',
+            \'coc-vimtex',
+            \'coc-texlab',
             \'coc-lists',
             \'coc-highlight',
             \'coc-css',
@@ -91,7 +93,9 @@ Plug 'crusoexia/vim-monokai'
 " colorscheme monokai
 Plug 'morhetz/gruvbox'
 " colorscheme gruvbox
-
+" latex support
+Plug 'lervag/vimtex', {'for': 'tex'}
+Plug 'xuhdev/vim-latex-live-preview', {'for': 'tex'}
 Plug 'fmoralesc/molokayo'
 Plug 'majutsushi/tagbar', {'on':'TagbarToggle'}
 Plug 'Chiel92/vim-autoformat'
@@ -376,9 +380,9 @@ map <C-Right> :bp<CR>        "上一个缓冲区
 noremap <F12> :Format<CR>:syntax sync fromstart<CR>
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 "前端主要使用Prettier美化
-autocmd filetype yaml nnoremap <buffer> <F12> :Prettier<CR>
+autocmd filetype yaml,vue nnoremap <buffer> <F12> :Prettier<CR>
 "编译型
-autocmd filetype cs,c,cpp,kotlin,sh noremap <buffer> <F12> :Autoformat<CR>
+autocmd filetype cs,c,cpp,kotlin,sh,vim noremap <buffer> <F12> :Autoformat<CR>
 "常用快捷键---------------------------------------------------------------------------------------
 "去空行，去行尾空格
 nnoremap <F2> :g/^\s*$/d<CR>:g/\s\+$/s<CR>
@@ -419,6 +423,8 @@ func! Compile()
         exec "!time php %"
     elseif &filetype == 'sh'
         exec "!./%"
+    elseif &filetype == 'tex'
+        exec ":LLPStartPreview"
     endif
 endfunc
 "C,C++的调试
@@ -504,11 +510,11 @@ set ttimeoutlen=150
 "
 "fzf-----------------------------------------------------------------------
 function! s:fzf_statusline()
-  " Override statusline as you like
-  highlight fzf1 ctermfg=161 ctermbg=251
-  highlight fzf2 ctermfg=23 ctermbg=251
-  highlight fzf3 ctermfg=237 ctermbg=251
-  setlocal statusline=%#fzf1#\ >\ %#fzf2#fz%#fzf3#f
+    " Override statusline as you like
+    highlight fzf1 ctermfg=161 ctermbg=251
+    highlight fzf2 ctermfg=23 ctermbg=251
+    highlight fzf3 ctermfg=237 ctermbg=251
+    setlocal statusline=%#fzf1#\ >\ %#fzf2#fz%#fzf3#f
 endfunction
 
 autocmd! User FzfStatusLine call <SID>fzf_statusline()

@@ -30,6 +30,7 @@
     "vetur.validation.style": true,
     "vetur.validation.script": true,
     "vetur.validation.template": true,
+    "vetur.completion.autoImport": true,
     "vetur.format.defaultFormatterOptions": {
         "prettyhtml": {
             "sortAttributes": true,
@@ -64,9 +65,8 @@
     "eslint.trace.server": "verbose",
     "eslint.packageManager": "yarn",
     "prettier.eslintIntegration": true,
-    "eslint.autoFix": true,
+    "eslint.format.enable": true,
     "eslint.autoFixOnSave": true,
-    "eslint.filetypes": ["javascript", "javascriptreact", "typescriptreact", "vue", "typescript"],
     "eslint.run": "onSave",
 
     //java
