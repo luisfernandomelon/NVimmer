@@ -1,15 +1,9 @@
 {
-    //tsserver
-    //use eslint to check js and ts
-    "tsserver.trace.server": "verbose",
-    "javascript.validate.enable": false,
-    "typescript.validate.enable": false,
-
     //emmet
     "emmet.priority": 1,
     "emmet.excludeLanguages": ["vue"],
 
-    //prettier
+    //prettier(default config)
     "prettier.trailingComma": "none",
     "prettier.printWidth": 120,
     "prettier.jsxBracketSameLine": true,
@@ -19,13 +13,11 @@
     "prettier.bracketSpacing": true,
     "prettier.htmlWhitespaceSensitivity": "ignore",
     "prettier.singleQuote": true,
-
     "prettier.useTabs": false,
     "prettier.arrowParens": "avoid",
     "prettier.proseWrap": "always",
 
     //vue
-    "vetur.trace.server": "verbose",
     "vetur.format.enable": true,
     "vetur.validation.style": true,
     "vetur.validation.script": true,
@@ -38,12 +30,12 @@
             "printWidth": 120
         }
     },
-    "vetur.format.defaultFormatter.js": "prettier-eslint",
+    "vetur.format.defaultFormatter.js": "prettier",
     "vetur.format.defaultFormatter.html": "prettier",
     "vetur.format.defaultFormatter.css": "prettier",
     "vetur.format.defaultFormatter.less": "prettier",
     "vetur.format.defaultFormatter.scss": "prettier",
-    "vetur.format.defaultFormatter.ts": "prettier-tslint",
+    "vetur.format.defaultFormatter.ts": "prettier",
     "vetur.format.defaultFormatter.stylus": "stylus-supremacy",
     "vetur.format.defaultFormatter.postcss": "prettier",
 
@@ -51,7 +43,6 @@
     "json.format.enable": false,
 
     //html
-    "html.trace.server": "verbose",
     "html.enable": true,
     "html.format.enable": true,
     "html.validate.html": true,
@@ -62,14 +53,12 @@
     "html.format.wrapAttributes": "auto",
 
     //eslint,js
-    "eslint.trace.server": "verbose",
-    "eslint.packageManager": "yarn",
+    "eslint.alwaysShowStatus": true,
     "prettier.eslintIntegration": true,
     "eslint.format.enable": true,
     "eslint.autoFixOnSave": true,
     "eslint.run": "onSave",
 
     //java
-    "java.trace.server": "verbose",
     "java.errors.incompleteClasspath.severity": "ignore"
 }
