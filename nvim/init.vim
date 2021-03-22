@@ -8,6 +8,7 @@ let g:coc_global_extensions=[
             \'coc-omnisharp',
             \'coc-html',
             \'coc-eslint',
+            \'coc-tsserver',
             \'coc-snippets',
             \'coc-emmet',
             \'coc-clangd',
@@ -23,7 +24,6 @@ let g:coc_global_extensions=[
             \'coc-phpls',
             \'coc-prettier',
             \'coc-wxml',
-            \'coc-tsserver',
             \'coc-vetur',
             \'coc-stylelint',
             \'coc-word',
@@ -80,26 +80,10 @@ let g:floaterm_position = 'center'
 "主题插件
 Plug 'flazz/vim-colorschemes'
 Plug 'jacoborus/tender.vim'
-" colorscheme tender
-Plug 'rakr/vim-one'
-" colorscheme one
-Plug 'drewtempelmeyer/palenight.vim'
-" colorscheme palenight
-Plug 'KeitaNakamura/neodark.vim'
-" colorscheme neodark
-Plug 'iCyMind/NeoSolarized'
-" colorscheme NeoSolarized
-Plug 'crusoexia/vim-monokai'
-" colorscheme monokai
-Plug 'morhetz/gruvbox'
-" colorscheme gruvbox
-" latex support
 Plug 'lervag/vimtex', {'for': 'tex'}
 Plug 'xuhdev/vim-latex-live-preview', {'for': 'tex'}
-Plug 'fmoralesc/molokayo'
 Plug 'majutsushi/tagbar', {'on':'TagbarToggle'}
 Plug 'Chiel92/vim-autoformat'
-"Plug 'jiangmiao/auto-pairs'
 Plug 'vim-airline/vim-airline'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
@@ -113,8 +97,6 @@ Plug 'mattn/emmet-vim', {'for':['html','xml','vue','php','typescriptreact','java
 Plug 'junegunn/fzf', { 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-surround'
-"Plug 'isRuslan/vim-es6', {'for':['html','php','vue','typescriptreact','javascript','typescript','typescript.tsx','javascript.jsx']}
-"Plug 'yuezk/vim-js', {'for':['vue','html','php','typescriptreact','typescript.tsx','javascript.jsx']}
 Plug 'maxmellon/vim-jsx-pretty', {'for':['typescriptreact','javascript','typescript','javascriptreact']}
 Plug 'HerringtonDarkholme/yats.vim', {'for':['typescriptreact','javascript','typescript','javascriptreact']}
 let g:vim_jsx_pretty_colorful_config = 1 " default 0
@@ -129,9 +111,7 @@ Plug 'plasticboy/vim-markdown'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight', { 'on': 'NERDTreeToggle' }
 Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
-Plug 'chemzqm/wxapp.vim', {'for':['wxml','wxss','js']}
 Plug 'OmniSharp/omnisharp-vim', {'for':'cs'}
-"Plug 'OrangeT/vim-csharp', {'for':'cs'}
 Plug 'w0rp/ale', {'for':'cs'}
 Plug 'hail2u/vim-css3-syntax',{'for':['html','vue','php']}
 let g:vue_pre_processors = []
@@ -320,8 +300,7 @@ set termguicolors
 if(has("mac")||has("macunix"))
     set termguicolors!
 endif
-colorscheme molokai     " 设置背景主题
-set re=1
+color molokai
 set lazyredraw
 set synmaxcol=0
 set t_Co=256
@@ -382,7 +361,7 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 "前端主要使用Prettier美化
 autocmd filetype yaml,vue nnoremap <buffer> <F12> :Prettier<CR>
 "编译型
-autocmd filetype cs,c,cpp,kotlin,sh,vim noremap <buffer> <F12> :Autoformat<CR>
+autocmd filetype cs,c,cpp,kotlin,sh,vim,tex noremap <buffer> <F12> :Autoformat<CR>
 "常用快捷键---------------------------------------------------------------------------------------
 "去空行，去行尾空格
 nnoremap <F2> :g/^\s*$/d<CR>:g/\s\+$/s<CR>
