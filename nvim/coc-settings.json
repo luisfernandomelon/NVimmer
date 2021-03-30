@@ -1,7 +1,8 @@
 {
+    "tabnine.priority": 0,
     //emmet
     "emmet.priority": 1,
-    "emmet.excludeLanguages": ["vue"],
+    "emmet.excludeLanguages": ["vue", "typescript", "javascript"],
 
     //prettier(default config)
     "prettier.trailingComma": "none",
