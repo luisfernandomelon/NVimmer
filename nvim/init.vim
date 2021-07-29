@@ -1,8 +1,8 @@
 "-----------------------vim-plug----------------------------
 call plug#begin('~/.config/nvim/plugged')
-"IDE启动界面
+" IDE启动界面
 Plug 'mhinz/vim-startify'
-"coc插件
+" coc插件
 Plug 'neoclide/coc.nvim', {'branch':'release'}
 let g:coc_global_extensions=[
             \'coc-omnisharp',
@@ -29,10 +29,11 @@ let g:coc_global_extensions=[
             \'coc-word',
             \'coc-python',
             \'coc-tabnine',
-            \'coc-emoji'
+            \'coc-emoji',
+            \'coc-floaterm'
             \]
 
-"彩虹括号
+" 彩虹括号
 Plug 'kien/rainbow_parentheses.vim'
 let g:rbpt_colorpairs = [
             \ ['brown', 'RoyalBlue3'],
@@ -60,7 +61,7 @@ au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 au Syntax * RainbowParenthesesLoadChevrons
 
-"各种代码的配色
+" code syntax
 Plug 'sheerun/vim-polyglot'
 let g:polyglot_disabled = [
             \'css',
@@ -70,30 +71,31 @@ let g:polyglot_disabled = [
             \'reacttypescript',
             \'php'
             \]
+Plug 'tomlion/vim-solidity'
+Plug 'uiiaoo/java-syntax.vim', {'for':'java'}
+Plug 'othree/html5.vim', {'for':['html','vue','php']}
+Plug 'hail2u/vim-css3-syntax',{'for':['html','vue','php']}
 
-"其他插件
-Plug 'honza/vim-snippets'
-Plug 'Shougo/neco-vim'
-Plug 'neoclide/coc-neco'
-Plug 'voldikss/vim-floaterm'
-let g:floaterm_position = 'center'
-"主题插件
+" themes
 Plug 'flazz/vim-colorschemes'
 Plug 'jacoborus/tender.vim'
 Plug 'lervag/vimtex', {'for': 'tex'}
 Plug 'xuhdev/vim-latex-live-preview', {'for': 'tex'}
 Plug 'majutsushi/tagbar', {'on':'TagbarToggle'}
-Plug 'Chiel92/vim-autoformat'
 Plug 'vim-airline/vim-airline'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
+" others
+Plug 'honza/vim-snippets'
+Plug 'Shougo/neco-vim'
+Plug 'neoclide/coc-neco'
+Plug 'voldikss/vim-floaterm'
+let g:floaterm_position = 'center'
+Plug 'Chiel92/vim-autoformat'
 Plug 'tpope/vim-fugitive'
 Plug 'ryanoasis/vim-devicons'
 Plug 'Yggdroot/indentLine'
-Plug 'uiiaoo/java-syntax.vim', {'for':'java'}
-Plug 'othree/html5.vim', {'for':['html','vue','php']}
 Plug 'mattn/emmet-vim', {'for':['html','xml','vue','php','typescriptreact','javascriptreact']}
-"Plug 'alvan/vim-closetag', {'for':['html','xml','vue','php','typescriptreact','javascriptreact']}
 Plug 'junegunn/fzf', { 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-surround'
@@ -101,13 +103,14 @@ Plug 'maxmellon/vim-jsx-pretty', {'for':['typescriptreact','javascript','typescr
 Plug 'HerringtonDarkholme/yats.vim', {'for':['typescriptreact','javascript','typescript','javascriptreact']}
 let g:vim_jsx_pretty_colorful_config = 1 " default 0
 Plug 'vim-scripts/matchit.zip', {'for':['html','xml','vue','php','typescriptreact','javascript','typescript','javascriptreact']}
-"CLang支持
+" CLang
 Plug 'jackguo380/vim-lsp-cxx-highlight'
-" json支持
+" json
 Plug 'leshill/vim-json', {'for':'json'}
-" markdown支持
+" markdown
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
+" nerdtree plugins
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 let NERDTreeShowHidden=1
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight', { 'on': 'NERDTreeToggle' }
@@ -119,11 +122,11 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in') |
             \ execute 'NERDTree' argv()[0] | wincmd p | enew | execute 'cd '.argv()[0] | endif
+" for C#
 Plug 'OmniSharp/omnisharp-vim', {'for':'cs'}
 Plug 'w0rp/ale', {'for':'cs'}
-Plug 'hail2u/vim-css3-syntax',{'for':['html','vue','php']}
-let g:vue_pre_processors = []
 
+let g:vue_pre_processors = []
 call plug#end()
 
 "------------------------------coc.nvim---------------------------------------
@@ -473,7 +476,7 @@ set termencoding=UTF-8
 set encoding=UTF-8
 set fileencodings=utf-8,ucs-bom,gbk,cp936,gb2312,gb18030
 "在插入模式中使用Ctrl+v粘贴全局剪贴板内容
-imap <C-V> <Esc>"+gp
+imap <C-V> <Esc>"+gpa
 nmap <C-V> "+gp
 "在Visual模式中使用Ctrl+c复制内容到全局剪贴板
 vnoremap <C-c> "+y
