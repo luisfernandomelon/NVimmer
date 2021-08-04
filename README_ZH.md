@@ -35,7 +35,7 @@ NVimmer 是新版的 [Vimmer](https://github.com/devilyouwei/Vimmer)，NVimmer �
 13. 英语单词 1000 多自动补全 **[new]**
 14. Emoji 表情补全 (输入`:`后自动弹出) **[new]**
 
-注：所有的现代前端框架的代码 format 和 lint 默认是 **prettier+eslint**！不要使用全局eslint了！
+注：所有的现代前端框架的代码 format 和 lint 默认是 **prettier+eslint**！不要使用全局 eslint 了！
 
 ## 【重磅推荐】Ubuntu/Deepin Shell 脚本一键安装 🚤 🚤 🚤
 
@@ -55,7 +55,9 @@ wget https://raw.githubusercontent.com/devilyouwei/NVimmer/master/ubuntu_install
 
 **安装过程出现问题** 🤔 🤔 🤔
 
-任何脚本运行出现问题或者安装后 nvim 无法正常工作的现象出现，可以先重新启动 Terminal，如果 nvim 还是有报错，那请重新执行安装脚本，本人的环境为 ubuntu 18.04+（干净），亲测可用，失败统统重新运行，很多东西从 github 下载会被打断或者很慢，你懂得～
+任何脚本运行出现问题或者安装后 nvim 无法正常工作的现象出现，可以先重新启动 Terminal，如果 nvim 还是有报错，那请重新执行
+安装脚本，本人的环境为 ubuntu 18.04+（干净），亲测可用，失败统统重新运行，很多东西从 github 下载会被打断或者很慢，你懂得
+～
 
 在大陆请把 pip，npm 源改成国内源
 
@@ -69,18 +71,15 @@ raw 无法下载的话在/etc/hosts 下添加如下：
 
 用 **wget** 下载字体（必须 wget），然后直接打开 terminal 在首选项中的字体改为：`Monaco Nerd Font` 即可
 
-```bash
-wget https://github.com/devilyouwei/linux-font/blob/master/Monaco/Nerd/MonacoNerd.ttf?raw=true -O ~/.fonts/MonacoNerd.ttf
+你可能还需要创建一个`.fonts`目录，如果不存在的话
 
-#deepin-terminal
-wget https://github.com/devilyouwei/linux-font/blob/master/Monaco/Nerd/MonacoNerdMono.ttf?raw=true -O ~/.fonts/MonacoNerdMono.ttf
+```bash
+wget https://github.com/devilyouwei/linux-font/blob/master/Monaco/Nerd/YaheiMonacoNerd.ttf?raw=true -O ~/.fonts/MonacoNerdMono.ttf
 
 fc-cache -vf
-
-# 重启终端
 ```
 
-或者手动下载后双击安装！需要您安装后手动配置终端字体。
+手动下载后安装
 
 [下载 Monaco Nerd Font](https://github.com/devilyouwei/linux-font/blob/master/Monaco/Nerd/MonacoNerdMono.ttf)
 
@@ -199,11 +198,13 @@ gem sources -l
 npm install -g eslint
 ```
 
-针对各种先进的前端框架，例如 vue,react 等，需要其他的 lint 规则和插件，请将他们的 eslint-plugin 安装在**项目目录**下，**不要全局**安装任何 eslint 的 plugin！
+针对各种先进的前端框架，例如 vue,react 等，需要其他的 lint 规则和插件，请将他们的 eslint-plugin 安装在**项目目录**下
+，**不要全局**安装任何 eslint 的 plugin！
 
 例如什么 eslint-plugin-prettier，也不要在系统 home 下的.eslintrc.json 中配置这些 plugin，coc-eslint 找不到他们会报错。
 
-如需用到这些 lint 插件，正确的做法应该是在开发**项目中**配置 package.json 或者 eslintrc 文件来配置规则，然后使用'npm install'局部安装到**项目中**，
+如需用到这些 lint 插件，正确的做法应该是在开发**项目中**配置 package.json 或者 eslintrc 文件来配置规则，然后使用'npm
+install'局部安装到**项目中**，
 
 4. 针对 tagbar 安装 universal-ctags，针对 autoformat 安装 astyle
 
@@ -263,17 +264,22 @@ echo 'eval $(perl -I $HOME/perl5/lib/perl5 -Mlocal::lib)' >>~/.bashrc
 
 ## 问题
 
--   PlugInstall 安装好后打开 nvim，coc 的方法 call 不到，报错。请请检查你的 nvim 是不是低于 0.3.0，也可以输入:checkHealth 检查，请安装高于 0.3.0 的版本
+-   PlugInstall 安装好后打开 nvim，coc 的方法 call 不到，报错。请请检查你的 nvim 是不是低于 0.3.0，也可以输入
+    :checkHealth 检查，请安装高于 0.3.0 的版本
 
--   关于开启浮动窗口，自动补全显示的详细文档的小窗口，需要 0.4.0 以上的 neovim，这种情况下请使用 snap 安装，或者官网寻找安装 0.4.0 以上版本的 neovim
+-   关于开启浮动窗口，自动补全显示的详细文档的小窗口，需要 0.4.0 以上的 neovim，这种情况下请使用 snap 安装，或者官网寻找
+    安装 0.4.0 以上版本的 neovim
 
 -   C#的 CS 文件第一次进入会要求安装 monoserver 用于自动补全和代码检查，选择 Yes
 
--   Nerd 字体无法显示，nerdtree 里都是乱码和方块，该问题是因为你没有安装 nerd 字体，并把 Terminal 字体更换成 nerd 字体，建议将/font 目录下的 MonacoNerd.ttf 安装到系统中，并把 Gnome-terminal 字体改成 Monaco Nerd。苹果的 Monaco 字体真好看！Windows 只能用 codenewroman nerd 字体
+-   Nerd 字体无法显示，nerdtree 里都是乱码和方块，该问题是因为你没有安装 nerd 字体，并把 Terminal 字体更换成 nerd 字体，
+    建议将/font 目录下的 MonacoNerd.ttf 安装到系统中，并把 Gnome-terminal 字体改成 Monaco Nerd。苹果的 Monaco 字体真好看
+    ！Windows 只能用 codenewroman nerd 字体
 
 -   浮动窗口卡在那里关不掉，请使用 c-w,o 手动清楚遮挡的浮动窗口，目测是 neovim 的 bug，没办法
 
--   格式化不喜欢，请修改 coc-setting.json 或者直接在 nvim 中输入':CocConfig'，另外.eslintrc.json 里是针对 prettier 格式化的设置，也可以按照喜好改
+-   格式化不喜欢，请修改 coc-setting.json 或者直接在 nvim 中输入':CocConfig'，另外.eslintrc.json 里是针对 prettier 格式
+    化的设置，也可以按照喜好改
 
 -   "System limit for number of file watchers reached"
 

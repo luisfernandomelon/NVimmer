@@ -32,10 +32,10 @@ For **Mac** [iVimmer](https://github.com/husterlf/iVimmer)
 10. Wechat wxml
 11. react js/jsx/tsx
 12. Kotlin
-13. English Words 1K+
+13. English Words
 14. Emoji (type `:` select emoji)
 
-NVimmer will use **Prettier and eslint** as the default linter and formatter for the fontend!
+Attention: NVimmer will use **Prettier and eslint** as the default linter and formatter for the fontend!
 
 ## [Recommended] Ubuntu/Deepin Onekey Install 🚤 🚤 🚤
 
@@ -65,17 +65,12 @@ wget https://raw.githubusercontent.com/devilyouwei/NVimmer/master/ubuntu_install
 Use wget (must) to download the font, and then open a terminal preference to config the font to `Monaco Nerd Font`
 
 ```bash
-wget https://github.com/devilyouwei/linux-font/blob/master/Monaco/Nerd/MonacoNerd.ttf?raw=true -O ~/.fonts/MonacoNerd.ttf
-
-#deepin-terminal
-wget https://github.com/devilyouwei/linux-font/blob/master/Monaco/Nerd/MonacoNerdMono.ttf?raw=true -O ~/.fonts/MonacoNerdMono.ttf
+wget https://github.com/devilyouwei/linux-font/blob/master/Monaco/Nerd/YaheiMonacoNerd.ttf?raw=true -O ~/.fonts/MonacoNerdMono.ttf
 
 fc-cache -vf
-
-# restart the terminal
 ```
 
-Or, You would like to download and install the font manually by double clicking it.
+Or, You would like to download and install the font manually.
 
 [Download Monaco Nerd Font](https://github.com/devilyouwei/linux-font/blob/master/Monaco/Nerd/MonacoNerdMono.ttf)
 
