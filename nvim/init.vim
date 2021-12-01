@@ -1,6 +1,7 @@
 "-----------------------vim-plug----------------------------
 call plug#begin('~/.config/nvim/plugged')
 " IDE启动界面
+Plug 'dracula/vim'
 Plug 'mhinz/vim-startify'
 " coc插件
 Plug 'neoclide/coc.nvim', {'branch':'release'}
@@ -544,4 +545,6 @@ inoremap <expr> <c-x><c-w> fzf#vim#complete#word({'right': '20%'})
 set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50
             \,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor
             \,sm:block-blinkwait175-blinkoff150-blinkon175
-
+"" Turn-on dracula color scheme
+syntax on
+color dracula
